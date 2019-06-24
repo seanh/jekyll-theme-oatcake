@@ -7,6 +7,8 @@ theme with a system font stack and hopefully decent typography. Has a lot of
 typographical details like `<kbd>` and `<samp>` support, figures with captions,
 and emojis.
 
+Demo site: <https://seanh.github.io/jekyll-theme-seanh/>
+
 Installation
 ------------
 
