@@ -11,10 +11,11 @@
   <body>
     <header class="site-header">
       <nav class="site-header__navbar">
-        <ul>
+        <ul class="site-header__nav-links">
           {% for item in site.data.header_links %}
-            <li {% if item.url == page.url %}class="active"{% endif %}>
-              <a href="{{ item.url }}">{{ item.title }}</a>
+            <li class="site-header__nav-item">
+              <a class="site-header__nav-link{% if item.url == page.url %} site-header__nav-link--active{% endif %}"
+                 href="{{ item.url }}">{{ item.title }}</a>
             </li>
          {% endfor %}
         </ul>

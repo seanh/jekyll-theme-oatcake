@@ -71,7 +71,7 @@ Complete example (from getbem.com):
     </form>
 **/
 :root {
-  --body-background-color: white;  /* Was #1F232B */
+  --body-background-color: white;
   --body-color: #24292e;
   --bold-color: black;
   --muted-color: #6a737d;
@@ -83,9 +83,7 @@ Complete example (from getbem.com):
   /* Use Gruvbox dark for code blocks. (Matches with gruvbox.css syntax highlighting theme.) */
   --pre-code-background-color: #282828;
   --pre-code-color: #ebdbb2;
-}
 
-:root {
   --navbar-font-weight: 600;
   --navbar-font-size: 14px;
 
@@ -125,6 +123,18 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   display: block;
 }
 
+body {
+  box-sizing: border-box;
+  text-rendering: optimizelegibility;
+  font-feature-settings: "kern";
+  font-size: var(--body-font-size);
+  text-size-adjust: none;
+  font-family: var(--body-font-family);
+  background-color: var(--body-background-color);
+  color: var(--body-color);
+  line-height: var(--body-line-height);
+}
+
 img, .content blockquote, .content p, .content li, .content ul, .content ol,
 .content figure, .content__inner-container pre, .content__inner-container iframe, dd {
   margin-bottom: 26px;
@@ -134,17 +144,9 @@ dt {
   font-weight: var(--bold-font-weight);
 }
 
-body {
-  box-sizing: border-box;
-  text-rendering: optimizelegibility;
-  font-feature-settings: "kern";
-  text-size-adjust: none;
-}
-
 blockquote {
   quotes: none;
 }
-
 blockquote:before, blockquote:after {
   content: '';
   content: none;
@@ -180,28 +182,6 @@ img {
   max-width: 100%;
 }
 
-figure img {
-  margin-bottom: 0;
-}
-
-body {
-  box-sizing: border-box;
-  font-family: var(--body-font-family);
-  text-rendering: optimizeLegibility;
-  background-color: var(--body-background-color);
-  color: var(--body-color);
-  font-size: var(--body-font-size);
-  line-height: var(--body-line-height);
-}
-
-/* A container class that sets the max width, is used in multiple places
- * (contains the header, contains the article content, ...) */
-.content__outer-container {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
 .site-header {
   padding-left: 20px;
   padding-right: 20px;
@@ -210,26 +190,25 @@ body {
   background-color: var(--body-color);
   color: var(--muted-color);
 }
-
 .site-header__navbar {
   text-align: center;
   overflow-x: auto;
   white-space: nowrap;
 }
-.site-header__navbar ul {
+.site-header__nav-links {
   list-style: none;
 }
-.site-header__navbar ul li {
+.site-header__nav-item {
   display: inline-block;
   vertical-align: bottom;
 }
-.site-header__navbar ul li:first-child a {
+.site-header__nav-item:first-child a {
   padding-left: 0;
 }
-.site-header__navbar ul li:last-child a {
+.site-header__nav-item:last-child a {
   padding-right: 0;
 }
-.site-header__navbar ul a {
+.site-header__nav-link {
   color: hsla(0,0%,100%,.75);
   text-decoration: none;
   border: none;
@@ -238,7 +217,7 @@ body {
   transition: color 250ms linear;
   font-size: var(--navbar-font-size);
 }
-.site-header__navbar ul a.active {
+.site-header__nav-link--active {
   font-weight: var(--navbar-font-weight);
   color: white;
 }
@@ -246,10 +225,18 @@ body {
 .content__title {
   text-align: center;
 }
+
+.content__outer-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
 .content__inner-container {
   max-width: 650px;
   margin: 0 auto;
 }
+
 .content h1 {
   font-size: 36px;
   line-height: 1.08;
@@ -283,6 +270,7 @@ body {
   margin-top: 25px;
   margin-left: -1.75px;
 }
+
 .content blockquote {
   font-style: italic;
   border-left: 3px solid #2b90d9;
@@ -293,9 +281,11 @@ body {
 .content blockquote p:last-child {
   margin-bottom: 0;
 }
+
 .content p, .content li {
   hyphens: auto;
 }
+
 .content__inner-container img {
   margin: 0 auto;
   height: auto;
@@ -304,19 +294,24 @@ body {
 .content__inner-container img, .box-shadow {
   box-shadow: 4px 6px 18px rgba(0, 0, 0, 0.35);
 }
+
 .content .image-large {
   margin-bottom: 50px;
 }
+
 .content .image-pull-left {
   float: left;
 }
+
 .content em {
   font-style: italic;
 }
+
 .content strong {
   font-weight: var(--bold-font-weight);
   color: var(--bold-color);
 }
+
 .content ul, .content ol {
   counter-reset: post;
 }
@@ -324,9 +319,13 @@ body {
   margin-left: 30px;
   margin-bottom: 14px;
 }
+
 .content figure figcaption {
   margin-top: 8px;
   text-align: center;
+}
+.content figure img {
+  margin-bottom: 0;
 }
 .content figure figcaption, .content figure figcaption p {
     color: var(--muted-color);
@@ -338,6 +337,7 @@ body {
   border-top: 1px solid var(--muted-color);
   margin: 26px 0;
 }
+
 code {
   background-color: var(--code-background-color);
   color: var(--code-color);
@@ -364,7 +364,6 @@ pre {
 .content__inner-container pre {
   border-radius: 4px;
 }
-
 pre, pre code {
   color: var(--pre-code-color);
   background-color: var(--pre-code-background-color);
@@ -387,15 +386,14 @@ pre code {
   text-decoration: none;
 }
 
-.footer {
+.post-footer {
   color: var(--muted-color);
   padding-bottom: 30px;
   font-size: var(--small-font-size);
   line-height: var(--small-line-height);
   margin-top: 90px;
 }
-.footer a {
+.post-footer__link {
   color: var(--muted-color);
   text-decoration: none;
 }
-
