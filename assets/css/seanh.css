@@ -1,0 +1,337 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,600|Roboto:400,500,700|Roboto+Mono:400");
+
+:root {
+  --body-background-color: white;  /* Was #1F232B */
+  --body-color: #24292e;
+  --bold-color: black;
+  --muted-color: #6a737d;
+
+  /* Use Gruvbox light for inline code tags. */
+  --code-background-color: #fbf1c7;
+  --code-color: #3c3836;
+
+  /* Use Gruvbox dark for code blocks. (Matches with gruvbox.css syntax highlighting theme.) */
+  --pre-code-background-color: #282828;
+  --pre-code-color: #ebdbb2;
+}
+
+:root {
+  --navbar-font-family: "Montserrat", sans-serif;
+  --navbar-font-weight: 600;
+  --navbar-font-size: 14px;
+
+  --body-font-family: "Roboto", sans-serif;
+  --body-font-size: 16px;
+  --body-line-height: 28px;
+
+  --bold-font-weight: 600;
+
+  --code-font-family: "Roboto Mono", monospace;
+  --code-font-size: 85%;
+
+  --small-font-size: 13px;
+  --small-line-height: 18px;
+}
+
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p,
+blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img,
+ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i,
+center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption,
+tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section,
+summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+img, .article blockquote, .article p, .article li, .article ul, .article ol,
+.article figure, .e-content pre, .e-content iframe, dd {
+  margin-bottom: 26px;
+}
+
+dt {
+  font-weight: var(--bold-font-weight);
+}
+
+body {
+  box-sizing: border-box;
+  text-rendering: optimizelegibility;
+  font-feature-settings: "kern";
+  text-size-adjust: none;
+}
+
+blockquote {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after {
+  content: '';
+  content: none;
+}
+q {
+  quotes: "“" "”" "‘" "’";
+}
+q:before {
+    content: open-quote;
+}
+q:after {
+    content: close-quote;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a {
+  outline: 0;
+  text-decoration: none;
+  border-bottom: 1px solid;
+}
+a.anchor {
+  border-bottom: none;
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+}
+
+figure img {
+  margin-bottom: 0;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: var(--body-font-family);
+  text-rendering: optimizeLegibility;
+  background-color: var(--body-background-color);
+  color: var(--body-color);
+  font-size: var(--body-font-size);
+  line-height: var(--body-line-height);
+}
+
+/* A container class that sets the max width, is used in multiple places
+ * (contains the header, contains the article content, ...) */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.site-header {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  background-color: var(--body-color);
+  color: var(--muted-color);
+}
+
+.site-header__navbar {
+  text-align: center;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+.site-header__navbar ul {
+  list-style: none;
+}
+.site-header__navbar ul li {
+  display: inline-block;
+  vertical-align: bottom;
+}
+.site-header__navbar ul li:first-child a {
+  padding-left: 0;
+}
+.site-header__navbar ul li:last-child a {
+  padding-right: 0;
+}
+.site-header__navbar ul a {
+  color: hsla(0,0%,100%,.75);
+  text-decoration: none;
+  border: none;
+  padding-right: 16px;
+  line-height: 32px;
+  transition: color 250ms linear;
+  font-family: var(--navbar-font-family);
+  font-size: var(--navbar-font-size);
+}
+.site-header__navbar ul a.active {
+  font-weight: var(--navbar-font-weight);
+  color: white;
+}
+
+.article .p-name {
+  text-align: center;
+}
+.article .p-subtitle {
+  color: var(--muted-color);
+  text-align: center;
+}
+.article .e-content {
+  max-width: 650px;
+  margin: 0 auto;
+}
+.article h1 {
+  font-size: 36px;
+  line-height: 1.08;
+  font-weight: 600;
+  padding-top: 35px;
+  margin-left: -2.63px;
+  position: relative;
+}
+.article h1::before {
+  display: block;
+  content: "";
+  width: 100px;
+  height: 0;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+}
+.article h2 {
+  font-size: 26px;
+  margin-left: -1.63px;
+  line-height: 1.22;
+  margin-top: 50px;
+  margin-bottom: 30px;
+  font-weight: 600;
+}
+.article h3, .article h4, .article h5, .article h6 {
+  font-size: 21px;
+  line-height: 1.22;
+  font-weight: 500;
+  margin-top: 25px;
+  margin-left: -1.75px;
+}
+.article blockquote {
+  font-style: italic;
+  border-left: 3px solid #2b90d9;
+  padding-left: 20px;
+  margin-left: -23px;
+  padding-bottom: 2px;
+}
+.article blockquote p:last-child {
+  margin-bottom: 0;
+}
+.article p, .article li {
+  hyphens: auto;
+}
+.e-content img {
+  margin: 0 auto;
+  height: auto;
+  border-radius: 4px;
+}
+.e-content img, .box-shadow {
+  box-shadow: 4px 6px 18px rgba(0, 0, 0, 0.35);
+}
+.article .image-large {
+  margin-bottom: 50px;
+}
+.article .image-pull-left {
+  float: left;
+}
+.article em {
+  font-style: italic;
+}
+.article strong {
+  font-weight: var(--bold-font-weight);
+  color: var(--bold-color);
+}
+.article ul, .article ol {
+  counter-reset: post;
+}
+.article ul li, .article ol li {
+  margin-left: 30px;
+  margin-bottom: 14px;
+}
+.article figure figcaption {
+  margin-top: 8px;
+  text-align: center;
+}
+.article figure figcaption, .article figure figcaption p {
+    color: var(--muted-color);
+}
+
+.article hr {
+  background: transparent;
+  border: 0;
+  border-top: 1px solid var(--muted-color);
+  margin: 26px 0;
+}
+code {
+  background-color: var(--code-background-color);
+  color: var(--code-color);
+  padding: 0.2em 0.4em;
+  margin: 0;
+  font-family: var(--code-font-family);
+  font-size: var(--code-font-size);
+  border-radius: 3px;
+}
+a code {
+  background-color: inherit;
+  color: inherit;
+  padding: 0;
+}
+h1 code, h2 code, h3 code, h4 code, h5 code, h6 code {
+  background-color: var(--body-background-color);
+  color: var(--body-color);
+}
+pre {
+  line-height: 1.25;
+  padding: 16px;
+  overflow: auto;
+}
+.e-content pre {
+  border-radius: 4px;
+}
+
+pre, pre code {
+  color: var(--pre-code-color);
+  background-color: var(--pre-code-background-color);
+}
+.article pre code strong {
+  color: white;
+}
+pre code {
+  padding: 0;
+}
+.article-header {
+  padding: 50px 0;
+}
+.article-header .image-large {
+  margin-top: 50px;
+  margin-bottom: 0;
+}
+.sig, .sig a {
+  color: var(--muted-color) !important;
+  text-decoration: none;
+}
+
+.footer {
+  color: var(--muted-color);
+  padding-bottom: 30px;
+  font-size: var(--small-font-size);
+  line-height: var(--small-line-height);
+  margin-top: 90px;
+}
+.footer a {
+  color: var(--muted-color);
+  text-decoration: none;
+}
+
