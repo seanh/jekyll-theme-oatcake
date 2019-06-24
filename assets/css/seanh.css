@@ -1,3 +1,75 @@
+/**
+
+This CSS mostly uses the BEM (Block Element Modifier) naming pattern
+(http://getbem.com/) for modularity:
+
+* CSS selectors mostly match using CSS class names only, no tag names or IDs.
+
+* CSS classes are either blocks, elements or modifiers:
+
+* Blocks have simple ASCII names like "site-search".
+
+  Single dashes are allowed within the name of a block, element or modifier.
+
+  You know something is a block if it's a standalone entity that is meaningful
+  on its own. Blocks can still interact with each other and can be nested
+  inside of each other, but are semantically equal with no precedence or
+  hierarchy.
+
+* Elements are sub-parts of blocks and are named like "block__element",
+  for example "site-search__field".
+
+  You know something is an element, rather than a block, if it's semantically
+  tied to its block and has no semantic meaning of its own.
+
+  Rather than a traditional CSS selector like:
+
+      .block element { ... }
+
+  instead you'd use:
+
+      .block__element { ... }
+
+* Modifiers are flags on block or elements, "<BLOCK>--<MODIFIER>" or
+  "<BLOCK>__<ELEMENT>--<MODIFIER>", for example "site-search--full" or
+  "person__hand--left".
+
+  You only use modifiers on HTML tags that also have the corresponding block or element.
+  For example `<div class="site-search site-search--full">` or
+  `<div class="person__hand person__hand--left">`.
+
+  There are three ways for CSS selectors to match a modifier:
+
+  1. Match a block modifier:
+
+         .block--modifier { ... }
+
+  2. Match an element within a modified block - in the HTML the modifier class
+     is added to the block tag but modifies its elements (child tags):
+
+         .block--modifier block__element { ... }
+
+  3. Match a modified element - in the HTML the modifier is added to the
+     element's tag directly:
+
+         .block__element--modifier { ... }
+
+Complete example (from getbem.com):
+
+    <style>
+        .form { }
+        .form--theme-xmas { }
+        .form--simple { }
+        .form__input { }
+        .form__submit { }
+        .form__submit--disabled { }
+    </style>
+
+    <form class="form form--theme-xmas form--simple">
+      <input class="form__input" type="text" />
+      <input class="form__submit form__submit--disabled" type="submit" />
+    </form>
+**/
 :root {
   --body-background-color: white;  /* Was #1F232B */
   --body-color: #24292e;
