@@ -14,8 +14,11 @@
         <ul class="site-header__nav-links">
           {% for item in site.data.header_links %}
             <li class="site-header__nav-item">
-              <a class="site-header__nav-link{% if item.url == page.url %} site-header__nav-link--active{% endif %}"
-                 href="{{ item.url }}">{{ item.title }}</a>
+              {% if item.url == page.url %}
+                <a class="site-header__nav-link site-header__nav-link--active">{{ item.title }}</a>
+              {% else %}
+                <a class="site-header__nav-link" href="{{ item.url }}">{{ item.title }}</a>
+              {% endif %}
             </li>
          {% endfor %}
         </ul>
