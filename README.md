@@ -24,11 +24,15 @@ theme: jekyll-theme-seanh
 
 And then execute:
 
-    $ bundle
+```console
+$ bundle
+```
 
 Or install it yourself as:
 
-    $ gem install jekyll-theme-seanh
+```console
+$ gem install jekyll-theme-seanh
+```
 
 Usage
 -----
