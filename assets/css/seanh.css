@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css?family=Montserrat:400,600|Roboto:400,500,700|Roboto+Mono:400");
-
 :root {
   --body-background-color: white;  /* Was #1F232B */
   --body-color: #24292e;
@@ -16,17 +14,16 @@
 }
 
 :root {
-  --navbar-font-family: "Montserrat", sans-serif;
   --navbar-font-weight: 600;
   --navbar-font-size: 14px;
 
-  --body-font-family: "Roboto", sans-serif;
+  --body-font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
   --body-font-size: 16px;
   --body-line-height: 28px;
 
   --bold-font-weight: 600;
 
-  --code-font-family: "Roboto Mono", monospace;
+  --code-font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;
   --code-font-size: 85%;
 
   --small-font-size: 13px;
@@ -56,8 +53,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   display: block;
 }
 
-img, .article blockquote, .article p, .article li, .article ul, .article ol,
-.article figure, .e-content pre, .e-content iframe, dd {
+img, .content blockquote, .content p, .content li, .content ul, .content ol,
+.content figure, .content__inner-container pre, .content__inner-container iframe, dd {
   margin-bottom: 26px;
 }
 
@@ -127,7 +124,7 @@ body {
 
 /* A container class that sets the max width, is used in multiple places
  * (contains the header, contains the article content, ...) */
-.container {
+.content__outer-container {
   max-width: 800px;
   margin: 0 auto;
   padding: 0 20px;
@@ -167,7 +164,6 @@ body {
   padding-right: 16px;
   line-height: 32px;
   transition: color 250ms linear;
-  font-family: var(--navbar-font-family);
   font-size: var(--navbar-font-size);
 }
 .site-header__navbar ul a.active {
@@ -175,18 +171,14 @@ body {
   color: white;
 }
 
-.article .p-name {
+.content__title {
   text-align: center;
 }
-.article .p-subtitle {
-  color: var(--muted-color);
-  text-align: center;
-}
-.article .e-content {
+.content__inner-container {
   max-width: 650px;
   margin: 0 auto;
 }
-.article h1 {
+.content h1 {
   font-size: 36px;
   line-height: 1.08;
   font-weight: 600;
@@ -194,7 +186,7 @@ body {
   margin-left: -2.63px;
   position: relative;
 }
-.article h1::before {
+.content h1::before {
   display: block;
   content: "";
   width: 100px;
@@ -204,7 +196,7 @@ body {
   top: 0;
   transform: translateX(-50%);
 }
-.article h2 {
+.content h2 {
   font-size: 26px;
   margin-left: -1.63px;
   line-height: 1.22;
@@ -212,63 +204,63 @@ body {
   margin-bottom: 30px;
   font-weight: 600;
 }
-.article h3, .article h4, .article h5, .article h6 {
+.content h3, .content h4, .content h5, .content h6 {
   font-size: 21px;
   line-height: 1.22;
   font-weight: 500;
   margin-top: 25px;
   margin-left: -1.75px;
 }
-.article blockquote {
+.content blockquote {
   font-style: italic;
   border-left: 3px solid #2b90d9;
   padding-left: 20px;
   margin-left: -23px;
   padding-bottom: 2px;
 }
-.article blockquote p:last-child {
+.content blockquote p:last-child {
   margin-bottom: 0;
 }
-.article p, .article li {
+.content p, .content li {
   hyphens: auto;
 }
-.e-content img {
+.content__inner-container img {
   margin: 0 auto;
   height: auto;
   border-radius: 4px;
 }
-.e-content img, .box-shadow {
+.content__inner-container img, .box-shadow {
   box-shadow: 4px 6px 18px rgba(0, 0, 0, 0.35);
 }
-.article .image-large {
+.content .image-large {
   margin-bottom: 50px;
 }
-.article .image-pull-left {
+.content .image-pull-left {
   float: left;
 }
-.article em {
+.content em {
   font-style: italic;
 }
-.article strong {
+.content strong {
   font-weight: var(--bold-font-weight);
   color: var(--bold-color);
 }
-.article ul, .article ol {
+.content ul, .content ol {
   counter-reset: post;
 }
-.article ul li, .article ol li {
+.content ul li, .content ol li {
   margin-left: 30px;
   margin-bottom: 14px;
 }
-.article figure figcaption {
+.content figure figcaption {
   margin-top: 8px;
   text-align: center;
 }
-.article figure figcaption, .article figure figcaption p {
+.content figure figcaption, .content figure figcaption p {
     color: var(--muted-color);
 }
 
-.article hr {
+.content hr {
   background: transparent;
   border: 0;
   border-top: 1px solid var(--muted-color);
@@ -297,7 +289,7 @@ pre {
   padding: 16px;
   overflow: auto;
 }
-.e-content pre {
+.content__inner-container pre {
   border-radius: 4px;
 }
 
@@ -305,16 +297,16 @@ pre, pre code {
   color: var(--pre-code-color);
   background-color: var(--pre-code-background-color);
 }
-.article pre code strong {
+.content pre code strong {
   color: white;
 }
 pre code {
   padding: 0;
 }
-.article-header {
+.content__header {
   padding: 50px 0;
 }
-.article-header .image-large {
+.content__header .image-large {
   margin-top: 50px;
   margin-bottom: 0;
 }

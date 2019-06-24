@@ -1,16 +1,16 @@
 <!DOCTYPE html>
-<html lang="{{ site.lang | default: "en-US" }}">
+<html lang="{{ site.lang | default: "en" }}">
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{{ site.title }}{% if page.title %} - {{ page.title }}{% endif %}</title>
+    <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
     <link rel="stylesheet" href="{{ "/assets/css/seanh.css" | relative_url }}">
     <link rel="stylesheet" href="{{ "/assets/css/gruvbox.css" | relative_url }}">
   </head>
   <body>
     <header class="site-header">
-      <nav class="site-header__navbar">
+      <nav class="site-header__nav">
         <ul>
           {% for item in site.data.header_links %}
             <li {% if item.url == page.url %}class="active"{% endif %}>
