@@ -100,9 +100,9 @@ Complete example (from getbem.com):
   --body-font-family: -apple-system, /* Safari and Firefox on macOS 10.11+ and iOS 9+ */
                       BlinkMacSystemFont, /* Chrome on macOS */
                       "Segoe UI", /* Windows 7+, all browsers */
+                      Cantarell, /* GNOME */
                       Roboto, /* Android 4.0+ and Chrome OS */
                       "Droid Sans", /* Android < 4.0 */
-                      Cantarell, /* GNOME */
                       "Helvetica Neue", /* macOS < 10.11 */
                       Helvetica, /* Fallback */
                       Arial, /* Fallback */
