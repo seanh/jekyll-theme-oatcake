@@ -87,13 +87,41 @@ Complete example (from getbem.com):
   --navbar-font-weight: 600;
   --navbar-font-size: 14px;
 
-  --body-font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
+  /* A system font stack based on ones used by GitHub, WordPress's admin
+   * dashboard, Medium, Bootstrap and others.
+   *
+   * I've omitted the Ubuntu font because I don't like it. Cantarell should be
+   * used on Ubuntu.
+   *
+   * The WordPress blog post recommends using only font weights 400 and 600
+   * with these:
+   * https://make.wordpress.org/core/2016/07/07/native-fonts-in-4-6/
+   */
+  --body-font-family: -apple-system, /* Safari and Firefox on macOS 10.11+ and iOS 9+ */
+                      BlinkMacSystemFont, /* Chrome on macOS */
+                      "Segoe UI", /* Windows 7+, all browsers */
+                      Cantarell, /* GNOME */
+                      Roboto, /* Android 4.0+ and Chrome OS */
+                      "Droid Sans", /* Android < 4.0 */
+                      "Helvetica Neue", /* macOS < 10.11 */
+                      Helvetica, /* Fallback */
+                      Arial, /* Fallback */
+                      sans-serif, /* The standard fallback */
+                      "Apple Color Emoji", /* Best emoji on macOS */
+                      "Segoe UI Emoji", /* Best emoji on Windows */
+                      "Segoe UI Symbol"; /* Best emoji on Windows */
   --body-font-size: 16px;
   --body-line-height: 28px;
 
   --bold-font-weight: 600;
 
-  --code-font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;
+  --code-font-family: SFMono-Regular, /* macOS (and iOS?) */
+                      Consolas,
+                      Menlo, /* Most macOS and iOS users */
+                      Monaco, /* macOS before 2009 */
+                      "Liberation Mono", /* Red Hat/Linux, similar to Courier New */
+                      Courier,
+                      monospace; /* The standard fallback */
   --code-font-size: 85%;
 
   --small-font-size: 13px;
@@ -266,7 +294,7 @@ img {
 .content h3, .content h4, .content h5, .content h6 {
   font-size: 21px;
   line-height: 1.22;
-  font-weight: 500;
+  font-weight: 400;
   margin-top: 25px;
   margin-left: -1.75px;
 }
