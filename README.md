@@ -42,7 +42,7 @@ TODO: Write usage instructions here. Describe your available layouts, includes, 
 Contributing
 ------------
 
-Bug reports and pull requests are welcome on GitHub at <https://seanh.github.io/jekyll-theme-seanh/>.
+Bug reports and pull requests are welcome on GitHub at <https://github.com/seanh/jekyll-theme-seanh/>.
 
 Development
 -----------
