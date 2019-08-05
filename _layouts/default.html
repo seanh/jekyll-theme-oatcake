@@ -7,6 +7,7 @@
     <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
     <link rel="stylesheet" href="{{ "/assets/css/seanh.css" | relative_url }}">
     <link rel="stylesheet" href="{{ "/assets/css/gruvbox.css" | relative_url }}">
+    <base href="{{ site.baseurl }}" target="_blank">
   </head>
   <body>
     <header class="site-header">
@@ -17,7 +18,7 @@
               {% if item.url == page.url %}
                 <a class="site-header__nav-link site-header__nav-link--active">{{ item.title }}</a>
               {% else %}
-                <a class="site-header__nav-link" href="{{ item.url }}">{{ item.title }}</a>
+                <a class="site-header__nav-link" href="{{ item.url | relative_url }}">{{ item.title }}</a>
               {% endif %}
             </li>
          {% endfor %}
