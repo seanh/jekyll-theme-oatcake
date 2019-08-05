@@ -1,0 +1,22 @@
+{% capture precode %}
+  <pre><code>{{ include.content }}</code></pre>
+{% endcapture %}
+
+{% if include.figcaption %}
+  {% capture content %}
+    <figure>
+      {{ precode }}
+      <figcaption>
+        {{ include.figcaption }}
+      </figcaption>
+    </figure>
+  {% endcapture %}
+  {% assign precode=content %}
+{% endif %}
+
+{% if include.fullbleed %}
+  {% include fullbleed.html content=precode %}
+{% else %}
+  {% include wide.html content=precode %}
+  <p></p>
+{% endif %}
