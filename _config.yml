@@ -1,3 +1,4 @@
+baseurl: https://seanh.github.io/jekyll-theme-seanh
 titles_from_headings:
   strip_title: true
   collections: true
