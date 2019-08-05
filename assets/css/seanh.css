@@ -425,5 +425,6 @@ pre code {
 }
 .post-footer__link {
   color: var(--muted-color);
+  border-bottom: none;
   text-decoration: none;
 }
