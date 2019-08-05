@@ -374,6 +374,7 @@ code {
   font-family: var(--code-font-family);
   font-size: var(--code-font-size);
   border-radius: 3px;
+  white-space: nowrap;
 }
 a code {
   background-color: inherit;
@@ -401,6 +402,7 @@ pre, pre code {
 }
 pre code {
   padding: 0;
+  white-space: pre;
 }
 .content__header {
   padding: 50px 0;
