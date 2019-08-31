@@ -24,6 +24,6 @@
         </ul>
       </nav>
     </header>
-    {{ content }}
+    {% include anchor_headings.html html=content anchorBody="§" beforeHeading=true anchorClass="anchor" %}
   </body>
 </html>
