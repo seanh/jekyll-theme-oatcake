@@ -2,3 +2,4 @@ baseurl: /jekyll-theme-seanh/
 titles_from_headings:
   strip_title: true
   collections: true
+permalink: /:categories/:year/:month/:day/:title
