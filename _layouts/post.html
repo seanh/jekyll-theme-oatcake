@@ -10,7 +10,7 @@ layout: default
       <div class="content__inner-container">
         {{ content }}
         <footer class="post-footer">
-            — <a class="post-footer__link" href="/">Sean Hammond</a>,
+            — <a class="post-footer__link" href="{{ "/" | relative_url }}">Sean Hammond</a>,
             <time class="post-footer__time" datetime="{{ page.date | date: '%Y-%m-%d' }}" pubdate>{{ page.date | date: "%-d %b %Y" }}</time>
         </footer>
       </div><!-- content__inner-container -->
