@@ -309,6 +309,10 @@ img {
 .content blockquote p:last-child {
   margin-bottom: 0;
 }
+.content blockquote blockquote,
+.content li blockquote {
+  margin-left: 3px;
+}
 
 .content p, .content li {
   hyphens: auto;
@@ -404,6 +408,17 @@ pre code {
   padding: 0;
   white-space: pre;
 }
+
+/** Fix code blocks created with Jekyll's {% highlight %} tag.
+ *  It outputs <figure class="highlight"><pre><code><table><tbody><tr><td><pre>.
+ *  See https://github.com/jekyll/jekyll/issues/6448 */
+figure.highlight > pre {
+  padding: 0;
+}
+figure.highlight pre {
+  margin: 0;
+}
+
 .content__header {
   padding: 50px 0;
 }
