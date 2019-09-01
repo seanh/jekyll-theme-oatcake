@@ -7,9 +7,9 @@ plugin will convert them to links to the right pages.
 
 For example to link to another post:
 
-    [figure post](2019-06-30-figures.md)
+    [figure post](2019-08-02-figures.md)
 
-That will render a link like this: [figures post](2019-06-30-figures.md).
+That will render a link like this: [figures post](2019-08-02-figures.md).
 
 You can also link to static pages:
 
