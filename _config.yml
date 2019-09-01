@@ -2,7 +2,6 @@ title: jekyll-theme-seanh
 description: A plain and simple Jekyll / GitHub Pages theme
 url: https://seanh.github.io/jekyll-theme-seanh/
 author: Sean Hammond
-baseurl: /jekyll-theme-seanh/
 titles_from_headings:
   strip_title: true
   collections: true
