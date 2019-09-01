@@ -164,7 +164,8 @@ body {
 }
 
 img, .content blockquote, .content p, .content li, .content ul, .content ol,
-.content figure, .content__inner-container pre, .content__inner-container iframe, dd {
+.content figure, .content__inner-container pre,
+.content__inner-container iframe, dd, .content details {
   margin-bottom: 26px;
 }
 
