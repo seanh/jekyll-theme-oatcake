@@ -1,3 +1,7 @@
+---
+draft: true
+---
+
 A Draft Post
 ============
 
