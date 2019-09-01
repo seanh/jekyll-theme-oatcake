@@ -43,7 +43,7 @@
         const filename = '_posts/' + date + '-' + title.replace(' ', '-').toLowerCase() + '.md';
         const message = 'Add%20%22' + title + '%22';
         const underline = '%3D'.repeat(title.length);
-        window.open('{{ site.github.repository_url }}/new/master/?filename=' + filename + '&value=' + title + '%0A' + underline + '%0A%0A&message=' + message);
+        window.open('{{ site.github.repository_url }}/new/master/?filename=' + filename + '&value=---%0Adraft%3A%20true%0A---%0A%0A' + title + '%0A' + underline + '%0A%0A&message=' + message);
       }
     </script>
   </body>
