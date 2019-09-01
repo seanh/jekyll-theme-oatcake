@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+    {% feed_meta %}
     <link rel="stylesheet" href="{{ "/assets/css/seanh.css" | relative_url }}">
     <link rel="stylesheet" href="{{ "/assets/css/gruvbox.css" | relative_url }}">
   </head>
