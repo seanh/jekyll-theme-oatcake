@@ -432,6 +432,10 @@ figure.highlight pre {
   text-decoration: none;
 }
 
+.muted {
+  color: var(--muted-color);
+}
+
 .post-footer {
   color: var(--muted-color);
   padding-bottom: 30px;
