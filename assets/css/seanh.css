@@ -477,3 +477,9 @@ sub {
 sup a.footnote {
   border-bottom: none;
 }
+
+#markdown-toc li,
+#markdown-toc li ul,
+#markdown-toc li ol {
+  margin-bottom: 0;
+}
