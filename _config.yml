@@ -12,6 +12,7 @@ plugins:
   - jemoji
   - jekyll-avatar
   - jekyll-feed
+  - jekyll-sitemap
 relative_links:
   enabled:     true
   collections: true
