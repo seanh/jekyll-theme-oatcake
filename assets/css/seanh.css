@@ -462,3 +462,18 @@ h6:hover .anchor {
   opacity: 1;
   text-decoration: none;
 }
+
+sup, sub {
+  vertical-align: baseline;
+  position: relative;
+  top: -0.4em;
+  font-size: smaller;
+  padding-left: .1em;
+  font-weight: bold;
+}
+sub {
+  top: 0.4em;
+}
+sup a.footnote {
+  border-bottom: none;
+}
