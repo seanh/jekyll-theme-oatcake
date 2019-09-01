@@ -528,3 +528,10 @@ pre samp {
 var {
   font-style: italic;
 }
+
+.new-post {
+  text-align: center;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+  color: var(--muted-color);
+}

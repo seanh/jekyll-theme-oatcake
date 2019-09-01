@@ -26,5 +26,25 @@
       </nav>
     </header>
     {% include anchor_headings.html html=content anchorBody="§" beforeHeading=true anchorClass="anchor" %}
+
+    <div class="new-post">
+      <label for="new-post">Start a new post:</label>
+      <input id="new-post" class="js-new-post" type="text" spellcheck="true" placeholder="My New Post Title" onchange="doNewPost()">
+    </div>
+    <script>
+      function doNewPost() {
+        const inputEl = document.querySelector('.js-new-post');
+        const today = new Date();
+        const year = today.getFullYear();
+        const month = ('0' + (today.getMonth() + 1)).slice(-2);
+        const day = ('0' + today.getDate()).slice(-2);
+        const date = year + '-' + month + '-' + day;
+        const title = inputEl.value;
+        const filename = '_posts/' + date + '-' + title.replace(' ', '-').toLowerCase() + '.md';
+        const message = 'Add%20%22' + title + '%22';
+        const underline = '%3D'.repeat(title.length);
+        window.open('{{ site.github.repository_url }}/new/master/?filename=' + filename + '&value=' + title + '%0A' + underline + '%0A%0A&message=' + message);
+      }
+    </script>
   </body>
 </html>
