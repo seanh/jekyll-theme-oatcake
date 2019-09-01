@@ -440,7 +440,6 @@ figure.highlight pre {
 
 .post-footer {
   color: var(--muted-color);
-  padding-bottom: 30px;
   font-size: var(--small-font-size);
   line-height: var(--small-line-height);
   margin-top: 90px;
