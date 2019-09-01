@@ -23,6 +23,7 @@
                 {% endif %}
               </li>
           {% endfor %}
+            <li class="site-header__nav-item"><a class="site-header__nav-link" href="https://raw.githubusercontent.com/{{ site.github.repository_nwo }}/master/{{ page.path }}" title="Source code for this page" name="Source code for this page">Source</a></li>
             <li class="site-header__nav-item"><a class="site-header__nav-link" href="{{ site.github.repository_url }}/edit/master/{{ page.path }}" title="Edit this page on GitHub" name="Edit this page on GitHub" target="_blank">Edit</a></li>
           </ul>
         </nav>
@@ -31,10 +32,10 @@
     </div>
 
     <footer class="site-footer">
-      <label for="new-post">New post:</label>
-      <input id="new-post" class="js-new-post" style="border: none;" type="text" spellcheck="true" placeholder="Title&hellip;" onchange="doNewPost()">
-      |
-      <a href="https://raw.githubusercontent.com/{{ site.github.repository_nwo }}/master/{{ page.path }}">Page source</a>
+      {% if page.path == "README.md" %}
+        <label for="new-post">New post:</label>
+        <input id="new-post" class="js-new-post" style="border: none;" type="text" spellcheck="true" placeholder="Title&hellip;" onchange="doNewPost()">
+      {% endif %}
     </footer>
 
     <script>
