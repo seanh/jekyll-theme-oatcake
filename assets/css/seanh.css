@@ -531,16 +531,25 @@ var {
   font-style: italic;
 }
 
-.new-post {
-  text-align: center;
-  margin-top: 3rem;
-  margin-bottom: 1rem;
-  color: var(--muted-color);
-}
-
 .content .posts-list {
   list-style-type: none;
 }
 .content .posts-list__item {
   margin-left: 0;
+}
+
+.site-footer {
+  text-align: center;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+  color: var(--muted-color);
+  font-size: smaller;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.site-footer a {
+  border-bottom: none;
+  color: inherit;
 }
