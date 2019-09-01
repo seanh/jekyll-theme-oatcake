@@ -6,3 +6,6 @@ permalink: /:categories/:year/:month/:day/:title
 plugins:
   - jekyll-mentions
   - jemoji
+relative_links:
+  enabled:     true
+  collections: true
