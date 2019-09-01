@@ -324,9 +324,11 @@ img {
   height: auto;
   border-radius: 4px;
 }
-.content__inner-container img, .box-shadow {
+.content__inner-container img:not(.emoji), .box-shadow {
   box-shadow: 4px 6px 18px rgba(0, 0, 0, 0.35);
 }
+
+img.emoji { display: inline-block; }
 
 .content .image-large {
   margin-bottom: 50px;
