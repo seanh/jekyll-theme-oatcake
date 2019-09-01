@@ -12,7 +12,16 @@ plugins:
   - jemoji
   - jekyll-avatar
   - jekyll-feed
+  - jekyll-seo-tag
   - jekyll-sitemap
 relative_links:
   enabled:     true
   collections: true
+social:
+  name: Sean Hammond
+  links:
+    - https://twitter.com/snhmnd
+    - https://www.linkedin.com/in/sean-hammond-412b8425/edit/birthday/
+    - https://github.com/seanh
+    - https://keybase.io/seanh
+lang: en_GB
