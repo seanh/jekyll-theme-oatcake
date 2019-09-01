@@ -514,3 +514,7 @@ samp {
   line-height: 1rem;
   font-family: var(--code-font-family);
 }
+
+var {
+  font-style: italic;
+}

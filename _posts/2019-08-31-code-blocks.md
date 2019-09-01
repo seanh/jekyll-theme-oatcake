@@ -96,3 +96,10 @@ $ make dev
 Here's the [full list of languages supported](https://github.com/rouge-ruby/rouge/wiki/List-of-supported-languages-and-lexers)
 for syntax highlighting.
 
+Representing Variables with `<var>`
+-----------------------------------
+
+You can also represent the name of a variable by using [the `<var>` tag](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/var):
+
+The variables <var>minSpeed</var> and <var>maxSpeed</var> control the minimum
+and maximum speed of the apparatus in revolutions per minute (RPM).
