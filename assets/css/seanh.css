@@ -537,3 +537,10 @@ var {
   margin-bottom: 1rem;
   color: var(--muted-color);
 }
+
+.content .posts-list {
+  list-style-type: none;
+}
+.content .posts-list__item {
+  margin-left: 0;
+}

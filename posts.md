@@ -1,9 +1,6 @@
 <ul style="list-style-type: none;">
   {% for post in site.posts %}
     {% if post.draft %}{% continue %}{% endif %}
-    <li>
-      <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-      <span class="muted">{{ post.date | date: "%b %Y" }}</span>
-    </li>
+    {% include post_link.html post=post %}
   {% endfor %}
 </ul>
