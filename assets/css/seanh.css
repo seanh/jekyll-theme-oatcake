@@ -515,6 +515,11 @@ samp {
   font-family: var(--code-font-family);
 }
 
+pre samp {
+  background-color: inherit;
+  color: inherit;
+}
+
 var {
   font-style: italic;
 }
