@@ -7,6 +7,13 @@
     {% feed_meta %}
     <link rel="stylesheet" href="{{ "/assets/css/seanh.css" | relative_url }}">
     <link rel="stylesheet" href="{{ "/assets/css/gruvbox.css" | relative_url }}">
+
+    {% if page.robots %}
+    <meta name="robots" content="{{ page.robots }}">
+    {% elsif layout.robots %}
+    <meta name="robots" content="{{ layout.robots }}">
+    {% endif %}
+
     {% seo %}
   </head>
   <body>
@@ -50,7 +57,7 @@
         const filename = '_posts/' + date + '-' + title.replace(/ /g, '-').toLowerCase() + '.md';
         const message = 'Add%20%22' + title + '%22';
         const underline = '%3D'.repeat(title.length);
-        window.open('{{ site.github.repository_url }}/new/master/?filename=' + filename + '&value=---%0Adraft%3A%20true%0Asitemap%3A%20false%0A---%0A%0A' + title + '%0A' + underline + '%0A%0A&message=' + message);
+        window.open('{{ site.github.repository_url }}/new/master/?filename=' + filename + '&value=---%0Adraft%3A%20true%0Asitemap%3A%20false%0Arobots%3A%20noindex%2C%20nofollow%0A---%0A%0A' + title + '%0A' + underline + '%0A%0A&message=' + message);
       }
     </script>
   </body>

@@ -1,5 +1,6 @@
 ---
 sitemap: false
+robots: noindex, nofollow
 ---
 <ul class="posts-list">
   {% for post in site.posts %}
