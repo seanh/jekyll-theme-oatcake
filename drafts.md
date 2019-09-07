@@ -1,3 +1,6 @@
+---
+sitemap: false
+---
 <ul class="posts-list">
   {% for post in site.posts %}
     {% unless post.draft %}{% continue %}{% endunless %}
