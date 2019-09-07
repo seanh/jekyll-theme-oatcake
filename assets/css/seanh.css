@@ -245,9 +245,9 @@ img {
   line-height: 32px;
   transition: color 250ms linear;
   font-size: var(--navbar-font-size);
+  font-weight: var(--navbar-font-weight);
 }
 .site-header__nav-link--active {
-  font-weight: var(--navbar-font-weight);
   color: white;
 }
 
