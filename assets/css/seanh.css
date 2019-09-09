@@ -440,10 +440,8 @@ figure.highlight pre {
   color: var(--muted-color);
 }
 
-.post-contents {
-  margin-bottom: 90px;
-}
 .post-footer {
+  margin-top: 90px;
   color: var(--muted-color);
   font-size: var(--small-font-size);
   line-height: var(--small-line-height);
