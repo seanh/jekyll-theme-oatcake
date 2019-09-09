@@ -410,6 +410,11 @@ pre, pre code {
   color: var(--pre-code-color);
   background-color: var(--pre-code-background-color);
 }
+.gist pre, .gist pre code {
+  color: var(--body-color);
+  background-color: var(--body-background-color);
+}
+
 .content pre code strong {
   color: white;
 }

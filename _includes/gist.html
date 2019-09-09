@@ -1,0 +1,8 @@
+{% capture script %}
+{% if include.file %}
+  <script src="https://gist.github.com/{{ include.sha }}.js?file={{ include.file }}"></script>
+{% else %}
+  <script src="https://gist.github.com/{{ include.sha }}.js"></script>
+{% endif %}
+{% endcapture %}
+{% include wide.html content=script %}
