@@ -1,5 +1,5 @@
-Code Blocks and `<var>`
-=======================
+Code Blocks, Syntax Highlighting and `<var>`
+============================================
 
 Code blocks use the [gruvbox colour scheme](https://github.com/morhetz/gruvbox).
 Here's what a basic code block looks like:
