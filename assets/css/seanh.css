@@ -172,13 +172,14 @@ body {
   flex-direction: column;
 }
 
-img, .content blockquote, .content p, .content li, .content ul, .content ol,
+img, .content blockquote, .content p, .content ul, .content ol,
 .content figure, .content__inner-container pre,
 .content__inner-container iframe, dd, .content details, .scroll,
 .admonition, .attention, .caution, .danger, .error, .important, .warning,
 .hint, .tip, .note, .seealso, .todo {
   margin-bottom: 26px;
 }
+.content li ul, .content li ol, .content li dl {margin-bottom: 0;}
 
 dt {
   font-weight: var(--bold-font-weight);
@@ -354,12 +355,7 @@ img.emoji { display: inline-block; }
 }
 .content ul li, .content ol li {
   margin-left: 30px;
-  margin-bottom: 14px;
 }
-.content ul li:last-child, .content ol li:last-child {
-  margin-bottom: 0;
-}
-
 .content figure figcaption {
   text-align: center;
 }
@@ -489,12 +485,6 @@ sub {
 }
 sup a.footnote {
   border-bottom: none;
-}
-
-#markdown-toc li,
-#markdown-toc li ul,
-#markdown-toc li ol {
-  margin-bottom: 0;
 }
 
 kbd {
