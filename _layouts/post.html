@@ -8,7 +8,9 @@ layout: default
         <h1 class="content__title">{{ page.title }}</h1>
       </header>
       <div class="content__inner-container">
-        {{ content }}
+        <div class="post-contents">
+          {{ content }}
+        </div>
         <footer class="post-footer">
             — <a class="post-footer__link" href="{{ "/" | relative_url }}">Sean Hammond</a>,
             <time class="post-footer__time" datetime="{{ page.date | date: '%Y-%m-%d' }}" pubdate>{{ page.date | date: "%b %Y" }}</time>

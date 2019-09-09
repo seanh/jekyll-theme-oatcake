@@ -138,7 +138,7 @@ ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i,
 center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption,
 tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section,
-summary, time, mark, audio, video {
+summary, time, mark, audio, video, hr {
   margin: 0;
   padding: 0;
   border: 0;
@@ -363,11 +363,10 @@ img.emoji { display: inline-block; }
 }
 
 .content figure figcaption {
-  margin-top: 8px;
   text-align: center;
 }
 .content figure img {
-  margin-bottom: 0;
+  margin-bottom: 8px;
 }
 .content figure figcaption, .content figure figcaption p {
     color: var(--muted-color);
@@ -377,7 +376,6 @@ img.emoji { display: inline-block; }
   background: transparent;
   border: 0;
   border-top: 1px solid var(--muted-color);
-  margin-top: 26px;
   margin-bottom: 26px;
 }
 
@@ -441,11 +439,13 @@ figure.highlight pre {
   color: var(--muted-color);
 }
 
+.post-contents {
+  margin-bottom: 90px;
+}
 .post-footer {
   color: var(--muted-color);
   font-size: var(--small-font-size);
   line-height: var(--small-line-height);
-  margin-top: 90px;
 }
 .post-footer__link {
   color: var(--muted-color);
