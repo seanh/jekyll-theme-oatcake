@@ -257,8 +257,6 @@ img {
 
 .content__outer-container {
   max-width: 800px;
-  margin-top: 0;
-  margin-bottom: 0;
   margin-left: auto;
   margin-right: auto;
   padding: 0 20px;
@@ -266,8 +264,6 @@ img {
 
 .content__inner-container {
   max-width: 650px;
-  margin-top: 0;
-  margin-bottom: 0;
   margin-left: auto;
   margin-right: auto;
 }
@@ -326,10 +322,7 @@ img {
 }
 
 .content__inner-container img {
-  margin-top: 0;
   margin-bottom: 0;
-  margin-left: auto;
-  margin-right: auto;
   height: auto;
   border-radius: 4px;
 }
@@ -381,15 +374,12 @@ img.emoji { display: inline-block; }
   border-top: 1px solid var(--muted-color);
   margin-top: 26px;
   margin-bottom: 26px;
-  margin-left: 0;
-  margin-right: 0;
 }
 
 code {
   background-color: var(--code-background-color);
   color: var(--code-color);
   padding: 0.2em 0.4em;
-  margin: 0;
   font-family: var(--code-font-family);
   font-size: var(--code-font-size);
   border-radius: 3px;
