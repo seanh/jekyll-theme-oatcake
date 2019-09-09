@@ -544,3 +544,7 @@ var {
 .site-footer__links-item:last-child {
   padding-right: 0;
 }
+
+summary {
+  cursor: pointer;
+}

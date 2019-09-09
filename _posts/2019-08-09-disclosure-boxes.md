@@ -2,7 +2,8 @@ Disclosure Boxes: `<details>` and `<summary>`
 =============================================
 
 You can create a disclosure widget, allowing some content to be hidden by
-closing the widget, by using [the `<details>` tag](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details):
+closing the widget, by using [the `<details>` tag](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details).
+The "pointer" cursor style is used when you hover over one:
 
 <details>
   <summary>This is the summary</summary>
