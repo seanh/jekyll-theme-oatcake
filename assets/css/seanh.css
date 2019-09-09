@@ -174,7 +174,7 @@ body {
 
 img, .content blockquote, .content p, .content li, .content ul, .content ol,
 .content figure, .content__inner-container pre,
-.content__inner-container iframe, dd, .content details {
+.content__inner-container iframe, dd, .content details, .scroll {
   margin-bottom: 26px;
 }
 
@@ -397,6 +397,8 @@ pre {
   padding: 16px;
   overflow: auto;
 }
+.scroll { max-height: 350px; overflow-y: scroll; }
+.scroll pre { margin-bottom: 0; }
 .content__inner-container pre {
   border-radius: 4px;
 }
