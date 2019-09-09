@@ -257,13 +257,19 @@ img {
 
 .content__outer-container {
   max-width: 800px;
-  margin: 0 auto;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
   padding: 0 20px;
 }
 
 .content__inner-container {
   max-width: 650px;
-  margin: 0 auto;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .content h1 {
@@ -320,7 +326,10 @@ img {
 }
 
 .content__inner-container img {
-  margin: 0 auto;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
   height: auto;
   border-radius: 4px;
 }
@@ -370,7 +379,10 @@ img.emoji { display: inline-block; }
   background: transparent;
   border: 0;
   border-top: 1px solid var(--muted-color);
-  margin: 26px 0;
+  margin-top: 26px;
+  margin-bottom: 26px;
+  margin-left: 0;
+  margin-right: 0;
 }
 
 code {
