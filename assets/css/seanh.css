@@ -301,6 +301,17 @@ img {
   margin-left: -23px;
   padding-bottom: 2px;
 }
+.content blockquote footer,
+.content blockquote cite {
+  color: var(--muted-color);
+}
+.content blockquote footer:before,
+.content blockquote cite:before {
+  content: "\2014 \00A0";
+}
+.content blockquote footer cite:before {
+  content: "";
+}
 .content blockquote p:last-child {
   margin-bottom: 0;
 }
