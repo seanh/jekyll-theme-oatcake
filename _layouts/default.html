@@ -17,32 +17,32 @@
     {% seo %}
   </head>
   <body>
-    <div class="site-footer__pusher">
-      <header class="site-header">
-        <nav class="site-header__navbar">
-          <ul class="site-header__nav-links">
-            {% for item in site.data.header_links %}
-              <li class="site-header__nav-item">
-                {% if item.url == page.url %}
-                  <a class="site-header__nav-link site-header__nav-link--active">{{ item.title }}</a>
-                {% else %}
-                  <a class="site-header__nav-link" href="{{ item.url | relative_url }}">{{ item.title }}</a>
-                {% endif %}
-              </li>
-          {% endfor %}
-            <li class="site-header__nav-item"><a class="site-header__nav-link" href="https://raw.githubusercontent.com/{{ site.github.repository_nwo }}/master/{{ page.path }}" title="Source code for this page" name="Source code for this page">Source</a></li>
-            <li class="site-header__nav-item"><a class="site-header__nav-link" href="{{ site.github.repository_url }}/edit/master/{{ page.path }}" title="Edit this page on GitHub" name="Edit this page on GitHub" target="_blank">Edit</a></li>
-          </ul>
-        </nav>
-      </header>
-      {% include anchor_headings.html html=content anchorBody="§" beforeHeading=true anchorClass="anchor" %}
-    </div>
+    <header class="site-header">
+      <nav class="site-header__navbar">
+        <ul class="site-header__nav-links">
+          {% for item in site.data.header_links %}
+            <li class="site-header__nav-item">
+              {% if item.url == page.url %}
+                <a class="site-header__nav-link site-header__nav-link--active">{{ item.title }}</a>
+              {% else %}
+                <a class="site-header__nav-link" href="{{ item.url | relative_url }}">{{ item.title }}</a>
+              {% endif %}
+            </li>
+        {% endfor %}
+        </ul>
+      </nav>
+    </header>
+    {% include anchor_headings.html html=content anchorBody="§" beforeHeading=true anchorClass="anchor" %}
 
     <footer class="site-footer">
-      {% if page.path == "README.md" %}
-        <label for="new-post">New post:</label>
-        <input id="new-post" class="js-new-post" type="text" spellcheck="true" placeholder="Title&hellip;" onchange="doNewPost()">
-      {% endif %}
+      <ul class="site-footer__links">
+        <li class="site-footer__links-item"><a href="https://raw.githubusercontent.com/{{ site.github.repository_nwo }}/master/{{ page.path }}" title="Source code for this page" name="View the sSource code for this page">View source</a></li>
+        <li class="site-footer__links-item"><a href="{{ site.github.repository_url }}/edit/master/{{ page.path }}" title="Edit this page on GitHub" name="Edit this page on GitHub" target="_blank">Edit</a></li>
+        <li class="site-footer__links-item">
+          <label for="new-post" title="Create a new post">New post:</label>
+          <input id="new-post" class="js-new-post site-footer__new-post-input" type="text" spellcheck="true" onchange="doNewPost()" title="Create a new post">
+        </li>
+      </ul>
     </footer>
 
     <script>

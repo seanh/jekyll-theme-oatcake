@@ -151,6 +151,12 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   display: block;
 }
 
+/* html and body need to have height: 100% in order for the sticky bottom
+ * site-footer to work. */
+html, body {
+  height: 100%;
+}
+
 body {
   box-sizing: border-box;
   text-rendering: optimizelegibility;
@@ -161,6 +167,9 @@ body {
   background-color: var(--body-background-color);
   color: var(--body-color);
   line-height: var(--body-line-height);
+
+  display: flex;
+  flex-direction: column;
 }
 
 img, .content blockquote, .content p, .content li, .content ul, .content ol,
@@ -524,6 +533,10 @@ var {
   font-style: italic;
 }
 
+.content {
+  flex-shrink: 0;
+}
+
 .content .posts-list {
   list-style-type: none;
 }
@@ -531,13 +544,28 @@ var {
   margin-left: 0;
 }
 
-.site-footer__pusher {
-  min-height: calc(100vh - 1.8em);
-}
 .site-footer {
-  height: 1em;
-  font-size: smaller;
   color: var(--muted-color);
+  font-size: smaller;
+  margin-top: auto;
+  padding-top: 10rem;
   text-align: center;
 }
-.site-footer a { color: inherit; }
+.site-footer a {
+  border-bottom: none;
+  color: inherit;
+}
+.site-footer__new-post-input {
+  border: 1px dashed #ccc;
+  padding: 2px;
+}
+.site-footer__links {
+  list-style: none;
+}
+.site-footer__links-item {
+  display: inline-block;
+  padding-right: 16px;
+}
+.site-footer__links-item:last-child {
+  padding-right: 0;
+}
