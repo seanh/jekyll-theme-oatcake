@@ -277,39 +277,22 @@ img {
   margin-right: auto;
 }
 
-.content h1 {
-  font-size: 36px;
-  line-height: 1.08;
+.content h1,
+.content h2,
+.content h3,
+.content h4,
+.content h5,
+.content h6 {
+  line-height: 1.2;
   font-weight: 600;
-  padding-top: 35px;
-  margin-left: -2.63px;
-  position: relative;
+  margin-bottom: 26px;
 }
-.content h1::before {
-  display: block;
-  content: "";
-  width: 100px;
-  height: 0;
-  position: absolute;
-  left: 50%;
-  top: 0;
-  transform: translateX(-50%);
-}
-.content h2 {
-  font-size: 26px;
-  margin-left: -1.63px;
-  line-height: 1.22;
-  margin-top: 50px;
-  margin-bottom: 30px;
-  font-weight: 600;
-}
-.content h3, .content h4, .content h5, .content h6 {
-  font-size: 21px;
-  line-height: 1.22;
-  font-weight: 400;
-  margin-top: 25px;
-  margin-left: -1.75px;
-}
+.content h1 { font-size: 2.5rem; }
+.content h2 { font-size: 2rem; }
+.content h3 { font-size: 1.75rem; }
+.content h4 { font-size: 1.5rem; }
+.content h5 { font-size: 1.25rem; }
+.content h6 { font-size: 1rem; }
 
 .content blockquote {
   font-style: italic;
@@ -396,6 +379,7 @@ a code {
 h1 code, h2 code, h3 code, h4 code, h5 code, h6 code {
   background-color: var(--body-background-color);
   color: var(--body-color);
+  padding: 0;
 }
 pre {
   line-height: 1.25;
@@ -470,15 +454,6 @@ h5:hover .anchor,
 h6:hover .anchor {
   opacity: 1;
   text-decoration: none;
-}
-h4:before {
-  content: '››››';
-}
-h5:before {
-  content: '›››››';
-}
-h6:before {
-  content: '››››››';
 }
 
 sup, sub {

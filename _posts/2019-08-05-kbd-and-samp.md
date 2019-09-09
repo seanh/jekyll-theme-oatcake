@@ -1,5 +1,5 @@
-User Input (`<kbd>`) and Sample Output (`<samp>`)
-=================================================
+User Input: `<kbd>` and `<samp>`
+================================
 
 The theme supports user input with [the `<kbd>` element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/kbd)
 and sample output with [the `<samp>` element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/samp).

@@ -1,5 +1,5 @@
-Disclosure Widgets: `<details>` and `<summary>`
-===============================================
+Disclosure Boxes: `<details>` and `<summary>`
+=============================================
 
 You can create a disclosure widget, allowing some content to be hidden by
 closing the widget, by using [the `<details>` tag](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details):
