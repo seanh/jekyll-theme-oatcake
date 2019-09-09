@@ -559,3 +559,5 @@ var {
 summary {
   cursor: pointer;
 }
+
+.lead { font-size: x-large; }
