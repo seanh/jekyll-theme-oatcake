@@ -332,10 +332,6 @@ img {
 
 img.emoji { display: inline-block; }
 
-.content .image-large {
-  margin-bottom: 50px;
-}
-
 .content .image-pull-left {
   float: left;
 }
@@ -426,10 +422,6 @@ figure.highlight pre {
 
 .content__header {
   padding: 50px 0;
-}
-.content__header .image-large {
-  margin-top: 50px;
-  margin-bottom: 0;
 }
 .sig, .sig a {
   color: var(--muted-color) !important;
