@@ -1,7 +1,7 @@
 .anchor {
   font-size: 1em;
   font-weight: normal;
-  margin-left: -1em;
+  margin-left: .15em;
   opacity: 0;
   padding-right: .5em;
   position: absolute;
@@ -17,4 +17,3 @@ h6:hover .anchor {
   opacity: 1;
   text-decoration: none;
 }
-
