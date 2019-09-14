@@ -70,9 +70,11 @@ Complete example (from getbem.com):
       <input class="form__submit form__submit--disabled" type="submit" />
     </form>
 **/
+
 /* html and body need to have height: 100% in order for the sticky bottom
  * site-footer to work. */
-html, body {
+html,
+body {
   height: 100%;
 }
 
@@ -90,26 +92,32 @@ body {
   background-color: var(--body-color);
   color: var(--muted-color);
 }
+
 .site-header__navbar {
   text-align: center;
   overflow-x: auto;
   white-space: nowrap;
 }
+
 .site-header__nav-links {
   list-style: none;
   margin-bottom: 0;
 }
+
 .site-header__nav-item {
   display: inline-block;
   vertical-align: bottom;
   margin-left: 0;
 }
+
 .site-header__nav-item:first-child a {
   padding-left: 0;
 }
+
 .site-header__nav-item:last-child a {
   padding-right: 0;
 }
+
 .site-header__nav-link {
   color: hsla(0,0%,100%,.75);
   text-decoration: none;
@@ -120,12 +128,13 @@ body {
   font-size: var(--navbar-font-size);
   font-weight: var(--navbar-font-weight);
 }
+
 .site-header__nav-link--active {
   color: white;
 }
 
-.content__title {
-  text-align: center;
+.content {
+  flex-shrink: 0;
 }
 
 .content__outer-container {
@@ -135,27 +144,28 @@ body {
   padding: 0 20px;
 }
 
+.content__header {
+  padding: 50px 0;
+}
+
+.content__title {
+  text-align: center;
+}
+
 .content__inner-container {
   max-width: 650px;
   margin-left: auto;
   margin-right: auto;
 }
 
-.content__header {
-  padding: 50px 0;
-}
-
 .post-footer {
   margin-top: 90px;
-}
-
-.content {
-  flex-shrink: 0;
 }
 
 .content .posts-list {
   list-style-type: none;
 }
+
 .content .posts-list__item {
   margin-left: 0;
 }

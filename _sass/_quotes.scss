@@ -12,6 +12,10 @@ q:after {
 
 blockquote {
   quotes: none;
+  font-style: italic;
+  border-left: 3px solid #2b90d9;
+  padding-left: 20px;
+  padding-bottom: 2px;
 }
 
 blockquote:before,
@@ -20,11 +24,9 @@ blockquote:after {
   content: none;
 }
 
-blockquote {
-  font-style: italic;
-  border-left: 3px solid #2b90d9;
-  padding-left: 20px;
-  padding-bottom: 2px;
+blockquote blockquote,
+li blockquote {
+  margin-left: 3px;
 }
 
 blockquote footer,
@@ -43,9 +45,4 @@ blockquote footer cite:before {
 
 blockquote *:last-child {
   margin-bottom: 0;
-}
-
-blockquote blockquote,
-li blockquote {
-  margin-left: 3px;
 }
