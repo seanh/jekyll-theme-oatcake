@@ -1,0 +1,11 @@
+samp {
+  background-color: #fafbfc;
+  color: #444d56;
+  line-height: 1rem;
+  font-family: var(--code-font-family);
+}
+
+pre samp {
+  background-color: inherit;
+  color: inherit;
+}
