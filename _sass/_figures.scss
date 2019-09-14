@@ -1,0 +1,12 @@
+figure figcaption {
+  text-align: center;
+}
+
+figure img {
+  margin-bottom: 8px !important;
+}
+
+figure figcaption,
+figure figcaption p {
+    color: var(--muted-color);
+}

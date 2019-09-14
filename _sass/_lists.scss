@@ -1,0 +1,19 @@
+ul,
+ol {
+  counter-reset: post;
+}
+
+ul li,
+ol li {
+  margin-left: 30px;
+}
+
+li ul,
+li ol,
+li dl {
+  margin-bottom: 0;
+}
+
+dt {
+  font-weight: var(--bold-font-weight);
+}

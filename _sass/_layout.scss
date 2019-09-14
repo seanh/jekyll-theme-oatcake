@@ -1,0 +1,182 @@
+/**
+
+This CSS mostly uses the BEM (Block Element Modifier) naming pattern
+(http://getbem.com/) for modularity:
+
+* CSS selectors mostly match using CSS class names only, no tag names or IDs.
+
+* CSS classes are either blocks, elements or modifiers:
+
+* Blocks have simple ASCII names like "site-search".
+
+  Single dashes are allowed within the name of a block, element or modifier.
+
+  You know something is a block if it's a standalone entity that is meaningful
+  on its own. Blocks can still interact with each other and can be nested
+  inside of each other, but are semantically equal with no precedence or
+  hierarchy.
+
+* Elements are sub-parts of blocks and are named like "block__element",
+  for example "site-search__field".
+
+  You know something is an element, rather than a block, if it's semantically
+  tied to its block and has no semantic meaning of its own.
+
+  Rather than a traditional CSS selector like:
+
+      .block element { ... }
+
+  instead you'd use:
+
+      .block__element { ... }
+
+* Modifiers are flags on block or elements, "<BLOCK>--<MODIFIER>" or
+  "<BLOCK>__<ELEMENT>--<MODIFIER>", for example "site-search--full" or
+  "person__hand--left".
+
+  You only use modifiers on HTML tags that also have the corresponding block or element.
+  For example `<div class="site-search site-search--full">` or
+  `<div class="person__hand person__hand--left">`.
+
+  There are three ways for CSS selectors to match a modifier:
+
+  1. Match a block modifier:
+
+         .block--modifier { ... }
+
+  2. Match an element within a modified block - in the HTML the modifier class
+     is added to the block tag but modifies its elements (child tags):
+
+         .block--modifier block__element { ... }
+
+  3. Match a modified element - in the HTML the modifier is added to the
+     element's tag directly:
+
+         .block__element--modifier { ... }
+
+Complete example (from getbem.com):
+
+    <style>
+        .form { }
+        .form--theme-xmas { }
+        .form--simple { }
+        .form__input { }
+        .form__submit { }
+        .form__submit--disabled { }
+    </style>
+
+    <form class="form form--theme-xmas form--simple">
+      <input class="form__input" type="text" />
+      <input class="form__submit form__submit--disabled" type="submit" />
+    </form>
+**/
+/* html and body need to have height: 100% in order for the sticky bottom
+ * site-footer to work. */
+html, body {
+  height: 100%;
+}
+
+body {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+.site-header {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  background-color: var(--body-color);
+  color: var(--muted-color);
+}
+.site-header__navbar {
+  text-align: center;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+.site-header__nav-links {
+  list-style: none;
+  margin-bottom: 0;
+}
+.site-header__nav-item {
+  display: inline-block;
+  vertical-align: bottom;
+  margin-left: 0;
+}
+.site-header__nav-item:first-child a {
+  padding-left: 0;
+}
+.site-header__nav-item:last-child a {
+  padding-right: 0;
+}
+.site-header__nav-link {
+  color: hsla(0,0%,100%,.75);
+  text-decoration: none;
+  border: none;
+  padding-right: 16px;
+  line-height: 32px;
+  transition: color 250ms linear;
+  font-size: var(--navbar-font-size);
+  font-weight: var(--navbar-font-weight);
+}
+.site-header__nav-link--active {
+  color: white;
+}
+
+.content__title {
+  text-align: center;
+}
+
+.content__outer-container {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 20px;
+}
+
+.content__inner-container {
+  max-width: 650px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.content__header {
+  padding: 50px 0;
+}
+
+.post-footer {
+  margin-top: 90px;
+}
+
+.content {
+  flex-shrink: 0;
+}
+
+.content .posts-list {
+  list-style-type: none;
+}
+.content .posts-list__item {
+  margin-left: 0;
+}
+
+.site-footer {
+  margin-top: auto;
+  padding-top: 10rem;
+  text-align: center;
+}
+
+.site-footer__links {
+  list-style: none;
+  margin-bottom: 0;
+}
+
+.site-footer__links-item {
+  display: inline-block;
+  padding-right: 16px;
+  margin-left: 0;
+}
+
+.site-footer__links-item:last-child {
+  padding-right: 0;
+}

@@ -1,0 +1,141 @@
+body {
+  text-rendering: optimizelegibility;
+  font-feature-settings: "kern";
+  font-size: var(--body-font-size);
+  text-size-adjust: none;
+  font-family: var(--body-font-family);
+  background-color: var(--body-background-color);
+  color: var(--body-color);
+  line-height: var(--body-line-height);
+}
+
+img,
+blockquote,
+p,
+ul,
+ol,
+figure,
+.content__inner-container pre,
+.content__inner-container iframe,
+dd,
+details,
+.scroll,
+.admonition,
+.attention,
+.caution,
+.danger,
+.error,
+.important,
+.warning,
+.hint,
+.tip,
+.note,
+.seealso,
+.todo {
+  margin-bottom: 26px;
+}
+
+p,
+li {
+  hyphens: auto;
+}
+
+em {
+  font-style: italic;
+}
+
+strong {
+  font-weight: var(--bold-font-weight);
+  color: var(--bold-color);
+}
+
+hr {
+  background: transparent;
+  border: 0;
+  border-top: 1px solid var(--muted-color);
+  margin-bottom: 26px;
+}
+
+.sig,
+.sig a {
+  color: var(--muted-color) !important;
+  text-decoration: none;
+}
+
+.muted {
+  color: var(--muted-color);
+}
+
+.post-footer {
+  color: var(--muted-color);
+  font-size: var(--small-font-size);
+  line-height: var(--small-line-height);
+}
+.post-footer__link {
+  color: var(--muted-color);
+  border-bottom: none;
+  text-decoration: none;
+}
+
+sup, sub {
+  vertical-align: baseline;
+  position: relative;
+  top: -0.4em;
+  font-size: smaller;
+  padding-left: .1em;
+  font-weight: bold;
+}
+
+sub {
+  top: 0.4em;
+}
+
+kbd {
+  background-color: #fafbfc;
+  border: 1px solid #c6cbd1;
+  border-bottom-color: #959da5;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #959da5;
+  color: #444d56;
+  padding: 3px 5px;
+  vertical-align: middle;
+  line-height: 1rem;
+  display: inline-block;
+  font-family: var(--code-font-family);
+  font-size: var(--code-font-size);
+}
+
+samp {
+  background-color: #fafbfc;
+  color: #444d56;
+  line-height: 1rem;
+  font-family: var(--code-font-family);
+}
+
+pre samp {
+  background-color: inherit;
+  color: inherit;
+}
+
+var {
+  font-style: italic;
+}
+
+.site-footer {
+  color: var(--muted-color);
+  font-size: smaller;
+}
+
+.site-footer a {
+  border-bottom: none;
+  color: inherit;
+}
+
+.site-footer__new-post-input {
+  border: 1px dashed #ccc;
+  padding: 2px;
+}
+
+summary {
+  cursor: pointer;
+}

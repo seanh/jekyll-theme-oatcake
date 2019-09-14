@@ -1,0 +1,70 @@
+code {
+  background-color: var(--code-background-color);
+  color: var(--code-color);
+  padding: 0.2em 0.4em;
+  font-family: var(--code-font-family);
+  font-size: var(--code-font-size);
+  border-radius: 3px;
+  white-space: nowrap;
+}
+
+a code {
+  background-color: inherit;
+  color: inherit;
+  padding: 0;
+}
+
+h1 code,
+h2 code,
+h3 code,
+h4 code,
+h5 code,
+h6 code {
+  background-color: var(--body-background-color);
+  color: var(--body-color);
+  padding: 0;
+}
+
+pre {
+  line-height: 1.25;
+  padding: 16px;
+  overflow: auto;
+}
+
+.content__inner-container pre {
+  border-radius: 4px;
+}
+
+pre,
+pre code {
+  color: var(--pre-code-color);
+  background-color: var(--pre-code-background-color);
+}
+
+pre code strong {
+  color: white;
+}
+
+pre code {
+  padding: 0;
+  white-space: pre;
+}
+
+/** Fix code blocks created with Jekyll's {% highlight %} tag.
+ *  It outputs:
+ *    <figure class="highlight">
+ *      <pre>
+ *        <code>
+ *          <table>
+ *            <tbody>
+ *              <tr>
+ *              <td>
+ *                <pre>
+ *  See https://github.com/jekyll/jekyll/issues/6448 */
+figure.highlight > pre {
+  padding: 0;
+}
+figure.highlight pre {
+  margin: 0;
+}
+

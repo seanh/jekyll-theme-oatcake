@@ -24,3 +24,5 @@ social:
     - https://github.com/seanh
     - https://keybase.io/seanh
 lang: en_GB
+sass:
+  style: compressed

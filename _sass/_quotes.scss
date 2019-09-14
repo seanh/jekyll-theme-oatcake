@@ -1,0 +1,51 @@
+q {
+  quotes: "“" "”" "‘" "’";
+}
+
+q:before {
+    content: open-quote;
+}
+
+q:after {
+    content: close-quote;
+}
+
+blockquote {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after {
+  content: '';
+  content: none;
+}
+
+blockquote {
+  font-style: italic;
+  border-left: 3px solid #2b90d9;
+  padding-left: 20px;
+  padding-bottom: 2px;
+}
+
+blockquote footer,
+blockquote cite {
+  color: var(--muted-color);
+}
+
+blockquote footer:before,
+blockquote cite:before {
+  content: "\2014 \00A0";
+}
+
+blockquote footer cite:before {
+  content: "";
+}
+
+blockquote *:last-child {
+  margin-bottom: 0;
+}
+
+blockquote blockquote,
+li blockquote {
+  margin-left: 3px;
+}

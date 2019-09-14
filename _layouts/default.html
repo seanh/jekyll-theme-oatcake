@@ -5,15 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     {% feed_meta %}
-    <link rel="stylesheet" href="{{ "/assets/css/seanh.css" | relative_url }}">
-    <link rel="stylesheet" href="{{ "/assets/css/gruvbox.css" | relative_url }}">
-
+    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}" />
     {% if page.robots %}
     <meta name="robots" content="{{ page.robots }}">
     {% elsif layout.robots %}
     <meta name="robots" content="{{ layout.robots }}">
     {% endif %}
-
     {% seo %}
   </head>
   <body>

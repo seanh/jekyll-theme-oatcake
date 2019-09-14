@@ -1,0 +1,20 @@
+.anchor {
+  font-size: 1em;
+  font-weight: normal;
+  margin-left: -1em;
+  opacity: 0;
+  padding-right: .5em;
+  position: absolute;
+  text-decoration: none;
+}
+
+h1:hover .anchor,
+h2:hover .anchor,
+h3:hover .anchor,
+h4:hover .anchor,
+h5:hover .anchor,
+h6:hover .anchor {
+  opacity: 1;
+  text-decoration: none;
+}
+
