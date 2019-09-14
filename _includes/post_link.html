@@ -2,5 +2,8 @@
   <p>
     <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
     <span class="muted">{{ post.date | date: "%b&nbsp;%Y" }}</span>
+    {% for tag in post.tags %}
+      <a href="{{ "/tags" | relative_url }}#{{ tag }}" class="pill">{{ tag }}</a>
+    {% endfor %}
   </p>
 </li>

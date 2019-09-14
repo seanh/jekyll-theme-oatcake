@@ -1,0 +1,266 @@
+.badge,
+.badge-primary,
+.badge-secondary,
+.badge-success,
+.badge-danger,
+.badge-warning,
+.badge-info,
+.badge-light,
+.badge-dark,
+.pill,
+.pill-primary,
+.pill-secondary,
+.pill-success,
+.pill-danger,
+.pill-warning,
+.pill-info,
+.pill-light,
+.pill-dark {
+  display: inline-block;
+  padding: .25em .4em;
+  font-size: 75%;
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: .25rem;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.pill,
+.pill-primary,
+.pill-secondary,
+.pill-success,
+.pill-danger,
+.pill-warning,
+.pill-info,
+.pill-light,
+.pill-dark {
+  padding-right: .6em;
+  padding-left: .6em;
+  border-radius: 10rem;
+}
+
+.badge-primary,
+.pill-primary {
+  color: #fff;
+  background-color: #007bff;
+}
+
+.badge-secondary,
+.pill-secondary {
+  color: #fff;
+  background-color: #6c757d;
+}
+
+.badge-success,
+.pill-success {
+  color: #fff;
+  background-color: #28a745;
+}
+
+.badge-danger,
+.pill-danger {
+  color: #fff;
+  background-color: #dc3545;
+}
+
+.badge-warning,
+.pill-warning {
+  color: #212529;
+  background-color: #ffc107;
+  border-color: #ffc107;
+}
+
+.badge-info,
+.pill-info {
+  color: #fff;
+  background-color: #17a2b8;
+}
+
+.badge-light,
+.pill-light {
+  color: #212529;
+  background-color: #f8f9fa;
+  border-color: #f8f9fa;
+}
+
+.badge,
+.pill,
+.badge-dark,
+.pill-dark {
+  color: #fff;
+  background-color: #343a40;
+}
+
+a.badge:focus,
+a.badge:hover,
+a.badge-primary:focus,
+a.badge-primary:hover,
+a.badge-secondary:focus,
+a.badge-secondary:hover,
+a.badge-success:focus,
+a.badge-success:hover,
+a.badge-danger:focus,
+a.badge-danger:hover,
+a.badge-warning:focus,
+a.badge-warning:hover,
+a.badge-info:focus,
+a.badge-info:hover,
+a.badge-light:focus,
+a.badge-light:hover,
+a.badge-dark:focus,
+a.badge-dark:hover,
+a.pill:focus,
+a.pill:hover,
+a.pill-primary:focus,
+a.pill-primary:hover,
+a.pill-secondary:focus,
+a.pill-secondary:hover,
+a.pill-success:focus,
+a.pill-success:hover,
+a.pill-danger:focus,
+a.pill-danger:hover,
+a.pill-warning:focus,
+a.pill-warning:hover,
+a.pill-info:focus,
+a.pill-info:hover,
+a.pill-light:focus,
+a.pill-light:hover,
+a.pill-dark:focus,
+a.pill-dark:hover {
+  text-decoration: none;
+  border-bottom: none;
+}
+
+a.badge:focus,
+a.badge-primary:focus,
+a.badge-secondary:focus,
+a.badge-success:focus,
+a.badge-danger:focus,
+a.badge-warning:focus,
+a.badge-info:focus,
+a.badge-light:focus,
+a.badge-dark:focus,
+a.pill:focus,
+a.pill-primary:focus,
+a.pill-secondary:focus,
+a.pill-success:focus,
+a.pill-danger:focus,
+a.pill-warning:focus,
+a.pill-info:focus,
+a.pill-light:focus,
+a.pill-dark:focus {
+  outline: 0;
+}
+
+a.badge-primary:focus,
+a.badge-primary:hover,
+a.pill-primary:focus,
+a.pill-primary:hover {
+  color: #fff;
+  background-color: #0062cc;
+}
+
+a.badge-primary:focus,
+a.pill-primary:focus {
+  box-shadow: 0 0 0 .2rem rgba(0,123,255,.5);
+}
+
+a.badge-secondary:focus,
+a.badge-secondary:hover,
+a.pill-secondary:focus,
+a.pill-secondary:hover {
+  color: #fff;
+  background-color: #545b62;
+}
+
+a.badge-secondary:focus,
+a.pill-secondary:focus {
+  box-shadow: 0 0 0 .2rem rgba(108,117,125,.5);
+}
+
+a.badge-success:focus,
+a.badge-success:hover,
+a.pill-success:focus,
+a.pill-success:hover {
+  color: #fff;
+  background-color: #1e7e34;
+}
+
+a.badge-success:focus,
+a.pill-success:focus {
+  box-shadow: 0 0 0 .2rem rgba(40,167,69,.5);
+}
+
+a.badge-danger:focus,
+a.badge-danger:hover,
+a.pill-danger:focus,
+a.pill-danger:hover {
+  color: #fff;
+  background-color: #bd2130;
+}
+
+a.badge-danger:focus,
+a.pill-danger:focus {
+  box-shadow: 0 0 0 .2rem rgba(220,53,69,.5);
+}
+
+a.badge-warning:focus,
+a.badge-warning:hover,
+a.pill-warning:focus,
+a.pill-warning:hover {
+  color: #212529;
+  background-color: #d39e00;
+}
+
+a.badge-warning:focus,
+a.pill-warning:focus {
+  box-shadow: 0 0 0 .2rem rgba(255,193,7,.5);
+}
+
+a.badge-info:focus,
+a.badge-info:hover,
+a.pill-info:focus,
+a.pill-info:hover {
+  color: #fff;
+  background-color: #117a8b;
+}
+
+a.badge-info:focus,
+a.pill-info:focus {
+  box-shadow: 0 0 0 .2rem rgba(23,162,184,.5);
+}
+
+a.badge-light:focus,
+a.badge-light:hover,
+a.pill-light:focus,
+a.pill-light:hover {
+  color: #212529;
+  background-color: #dae0e5;
+}
+
+a.badge-light:focus,
+a.pill-light:focus {
+  box-shadow: 0 0 0 .2rem rgba(248,249,250,.5);
+}
+
+a.badge:focus,
+a.badge:hover,
+a.badge-dark:focus,
+a.badge-dark:hover,
+a.pill:focus,
+a.pill:hover,
+a.pill-dark:focus,
+a.pill-dark:hover {
+  color: #fff;
+  background-color: #1d2124;
+}
+
+a.badge:focus,
+a.badge-dark:focus,
+a.pill:focus,
+a.pill-dark:focus {
+  box-shadow: 0 0 0 .2rem rgba(52,58,64,.5);
+}
