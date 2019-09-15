@@ -1,10 +1,6 @@
-title: jekyll-theme-seanh
-description: A plain and simple Jekyll / GitHub Pages theme
 author: Sean Hammond
 baseurl: /jekyll-theme-seanh
-titles_from_headings:
-  strip_title: true
-  collections: true
+description: The GitHub Pages theme that I use on seanh.cc
 permalink: pretty
 plugins:
   - jekyll-mentions
@@ -13,6 +9,12 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-sitemap
+sass:
+  style: compressed
+title: jekyll-theme-seanh
+
+github_ribbon: true
+
 relative_links:
   enabled:     true
   collections: true
@@ -24,6 +26,6 @@ social:
     - https://github.com/seanh
     - https://keybase.io/seanh
 lang: en_GB
-sass:
-  style: compressed
-github_ribbon: true
+titles_from_headings:
+  strip_title: true
+  collections: true
