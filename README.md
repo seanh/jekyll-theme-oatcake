@@ -1,20 +1,26 @@
 jekyll-theme-seanh
 ==================
 
-My Jekyll theme, as used on [seanh.cc](https://seanh.cc/).
-A very plain and simple [Jekyll](https://jekyllrb.com/) / [GitHub Pages](https://pages.github.com/)
-theme with a system font stack and hopefully decent typography. Has a lot of
-typographical details like `<kbd>` and `<samp>` support, figures with captions,
-and emojis.
+This is the [GitHub Pages](https://pages.github.com/) theme that I use on
+[seanh.cc](https://seanh.cc/). It's meant to be a plain theme, fast and mobile
+friendly, that doesn't get in the way of reading or writing. It has a simple
+layout, uninteresting colours, and a system font stack that matches with the
+user's OS.
 
-Demo site: <https://seanh.github.io/jekyll-theme-seanh/>
+The theme also aims to delight with
+[nice typography](_posts/2019-08-01-basics.md)
+and features like
+[figures](_posts/2019-08-02-figures.md),
+[code highlighting](_posts/2019-08-03-code-blocks.md),
+[`<kbd>` and `<samp>` styling](_posts/2019-08-05-kbd-and-samp.md),
+[footnotes](_posts/2019-08-06-footnotes.md),
+[emoji](_posts/2019-08-11-emoji.md),
+[alerts](_posts/2019-09-09-alert-boxes.md),
+[lead paragraphs](_posts/2019-09-09-lead-paragraphs.md),
+[badges](_posts/2019-09-13-badges-and-pills.md)
+and more.
 
-Features
---------
-
-<div class="todo" markdown="1">
-**TODO:** Fill in this Features section.
-</div>
+See the posts for the [full list of features](posts.md).
 
 Using with GitHub Pages
 -----------------------
@@ -60,12 +66,63 @@ Using with GitHub Pages
 4. If you want to have a page listing all your draft posts then copy
    [drafts.md]({{ site.github.repository_url }}/blob/master/drafts.md) to your site.
 
-Using with Jekyll
------------------
+Running Locally
+---------------
 
-<div class="todo" markdown="1">
-**TODO:** Fill in this section.
+<div class="seealso" markdown="1">
+**See also:**
+GitHub's instructions for [running a GitHub Pages site locally](https://help.github.com/en/articles/setting-up-your-github-pages-site-locally-with-jekyll)
+using the GitHub Pages gem.
 </div>
+
+To install and run this theme and demo site locally:
+
+1. Install Ruby (2.1 or newer), Bundler and git:
+
+   ```
+   sudo apt install ruby bundler git
+   ```
+2. Clone this repo and cd into it:
+
+   ```
+   git clone https://github.com/seanh/jekyll-theme-seanh.git
+   cd jekyll-theme-seanh
+   ```
+
+3. Install Jekyll and other dependencies:
+
+   ```
+   bundle install --path vendor/bundle
+   ```
+
+4. Finally, serve the site at <http://localhost:4000/jekyll-theme-seanh/>:
+
+   ```
+    bundle exec jekyll serve
+    ```
+
+You should run `bundle-update` now and then to keep up to date with the GitHub
+Pages gem.
+
+### Publishing a Release
+
+To release a new version of the theme to [RubyGems](https://rubygems.org/gems/jekyll-theme-seanh):
+
+1. Update the version number in
+   [jekyll-theme-seanh.gemspec]({{ site.github.repository_url }}/blob/master/jekyll-theme-seanh.gemspec)
+   and commit the change to git.
+
+2. Package the new version of the theme:
+
+   ```
+   gem build jekyll-theme-seanh.gemspec
+   ```
+
+3. Upload the packaged theme to RubyGems:
+
+   ```
+   gem push jekyll-theme-seanh-X.Y.Z.gem
+   ```
 
 Contributing
 ------------
