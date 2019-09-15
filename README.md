@@ -9,56 +9,54 @@ and emojis.
 
 Demo site: <https://seanh.github.io/jekyll-theme-seanh/>
 
-Installation
-------------
+Using with GitHub Pages
+-----------------------
 
-Add this line to your Jekyll site's `Gemfile`:
+1. Add the theme to your `_config.yml` file with the `remote_theme` setting, and
+   also add the non-default plugins that the theme needs:
 
-```ruby
-gem "jekyll-theme-seanh"
-```
+   ```yaml
+   remote_theme: seanh/jekyll-theme-seanh
+   plugins:
+     - jekyll-mentions
+     - jemoji
+     - jekyll-avatar
+     - jekyll-feed
+     - jekyll-seo-tag
+     - jekyll-sitemap
+   ```
 
-And add this line to your Jekyll site's `_config.yml`:
+   <div class="tip" markdown="1">
+   You also have a bunch more plugins available to you by default on GitHub
+   Pages, in addition to those listed above. See the [list of plugins installed
+   by default on GitHub
+   Pages](https://help.github.com/en/articles/configuring-jekyll-plugins#default-plugins).
+   </div>
 
-```yaml
-theme: jekyll-theme-seanh
-```
+   <div class="tip" markdown="1">
+   For a full example configuration with Jekyll settings and settings for a few
+   of the plugins, see
+   [this demo site's `_config.yml`]({{ site.github.repository_url }}/blob/master/_config.yml).
+   </div>
 
-And then execute:
+2. Include the list of blog posts in a page somewhere, by using this include:
 
-```console
-$ bundle
-```
+       {% raw %}{% include post_list.html %}{% endraw %}
 
-Or install it yourself as:
+   For example you might want to include it on your front page, or on a `/posts` page.
+   See [posts.md]({{ site.github.repository_url }}/blob/master/posts.md)
+   for an example.
 
-```console
-$ gem install jekyll-theme-seanh
-```
+3. If you plan on using tags then copy [tags.md]({{ site.github.repository_url }}/blob/master/tags.md),
+   the tags page, to your site.
 
-Usage
------
-
-TODO: Write usage instructions here. Describe your available layouts, includes, sass and/or assets.
+4. If you want to have a page listing all your draft posts then copy
+   [drafts.md]({{ site.github.repository_url }}/blob/master/drafts.md) to your site.
 
 Contributing
 ------------
 
 Bug reports and pull requests are welcome on GitHub at <https://github.com/seanh/jekyll-theme-seanh/>.
-
-Development
------------
-
-To set up your environment to develop this theme:
-
-```console
-$ git clone https://github.com/seanh/jekyll-theme-seanh.git
-$ cd jekyll-theme-seanh
-$ bundle install --path vendor/bundle
-$ bundle exec jekyll serve
-```
-
-...and open your browser at <http://localhost:4000>.
 
 License
 -------
