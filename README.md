@@ -9,6 +9,13 @@ and emojis.
 
 Demo site: <https://seanh.github.io/jekyll-theme-seanh/>
 
+Features
+--------
+
+<div class="todo" markdown="1">
+**TODO:** Fill in this Features section.
+</div>
+
 Using with GitHub Pages
 -----------------------
 
@@ -52,6 +59,13 @@ Using with GitHub Pages
 
 4. If you want to have a page listing all your draft posts then copy
    [drafts.md]({{ site.github.repository_url }}/blob/master/drafts.md) to your site.
+
+Using with Jekyll
+-----------------
+
+<div class="todo" markdown="1">
+**TODO:** Fill in this section.
+</div>
 
 Contributing
 ------------
