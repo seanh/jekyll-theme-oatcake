@@ -46,7 +46,7 @@ Publishing a Release
 To release a new version of the theme to [RubyGems](https://rubygems.org/gems/jekyll-theme-seanh):
 
 1. Update the version number in
-   [jekyll-theme-seanh.gemspec]({{ site.github.repository_url }}/blob/master/jekyll-theme-seanh.gemspec)
+   [jekyll-theme-seanh.gemspec](jekyll-theme-seanh.gemspec)
    and commit the change to git.
 
 2. Package the new version of the theme:
