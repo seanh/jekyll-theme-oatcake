@@ -26,3 +26,4 @@ social:
 lang: en_GB
 sass:
   style: compressed
+github_ribbon: true
