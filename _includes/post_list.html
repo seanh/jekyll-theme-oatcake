@@ -1,0 +1,18 @@
+<ul style="list-style-type: none;">
+  {% if include.tag %}
+    {% assign posts = tag[1] %}
+  {% else %}
+    {% assign posts = site.posts %}
+  {% endif %}
+
+  {% for post in posts %}
+    {% if include.drafts %}
+      {% unless post.draft %}{% continue %}{% endunless %}
+    {% else %}
+      {% if post.draft %}{% continue %}{% endif %}
+    {% endif %}
+    {% if include.untagged and post.tags.size > 0 %}{% continue %}{% endif %}
+    {% include post_item.html post=post %}
+  {% endfor %}
+</ul>
+
