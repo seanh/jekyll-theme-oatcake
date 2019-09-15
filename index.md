@@ -29,7 +29,7 @@ Using with GitHub Pages
    also add the non-default plugins that the theme needs:
 
    ```yaml
-   remote_theme: seanh/jekyll-theme-seanh
+   remote_theme: seanh/jekyll-theme-seanh@0.1.3
    plugins:
      - jekyll-mentions
      - jemoji
@@ -38,6 +38,18 @@ Using with GitHub Pages
      - jekyll-seo-tag
      - jekyll-sitemap
    ```
+   
+   <div class="tip" markdown="1">
+   You'll want to change the `@0.1.3` part at the end of the theme name to
+   the [the latest version of the theme]({{ site.github.repository_url }}/releases).
+
+   When new versions of the theme are released you update this theme version number in your
+   `_config.yml` file, commit it, and push it to GitHub, and GitHub pages will rebuild your
+   site with the new version of the theme.
+
+   See [jekyll-remote-theme](https://github.com/benbalter/jekyll-remote-theme) for more about
+   how GitHub Pages handles GitHub-hosted Jekyll themes.
+   </div>
 
    <div class="tip" markdown="1">
    You also have a bunch more plugins available to you by default on GitHub
