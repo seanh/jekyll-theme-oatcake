@@ -1,7 +1,6 @@
 Code Blocks, Syntax Highlighting and `<var>`
 ============================================
 
-Code blocks use the [gruvbox colour scheme](https://github.com/morhetz/gruvbox).
 Here's what a basic code block looks like:
 
     def test_validate_url_returns_an_http_url_unmodified():

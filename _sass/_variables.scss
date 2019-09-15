@@ -4,13 +4,12 @@
   --bold-color: black;
   --muted-color: #6a737d;
 
-  /* Use Gruvbox light for inline code tags. */
-  --code-background-color: #fbf1c7;
-  --code-color: #3c3836;
+  /* Match the background-color of the GitHub syntax highlighting theme. */
+  --code-background-color: #f8f8f8;
+  --code-color: inherit;
 
-  /* Use Gruvbox dark for code blocks. (Matches with gruvbox.css syntax highlighting theme.) */
-  --pre-code-background-color: #282828;
-  --pre-code-color: #ebdbb2;
+  --pre-code-background-color: inherit;
+  --pre-code-color: inherit;
 
   --navbar-font-weight: 600;
   --navbar-font-size: 14px;
