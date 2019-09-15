@@ -43,20 +43,10 @@ Pages gem.
 Publishing a Release
 --------------------
 
-To release a new version of the theme to [RubyGems](https://rubygems.org/gems/jekyll-theme-seanh):
+Just create a new tag and [GitHub release](https://github.com/seanh/jekyll-theme-seanh/releases).
 
-1. Update the version number in
-   [jekyll-theme-seanh.gemspec](jekyll-theme-seanh.gemspec)
-   and commit the change to git.
+GitHub Pages sites can then upgrade to the new version by bumping the version number in their
+`_config.yml` files: `remote_theme: seanh/jekyll-theme-seanh@X.Y.Z`
 
-2. Package the new version of the theme:
-
-   ```
-   gem build jekyll-theme-seanh.gemspec
-   ```
-
-3. Upload the packaged theme to RubyGems:
-
-   ```
-   gem push jekyll-theme-seanh-X.Y.Z.gem
-   ```
+See the [jekyll-remote-theme](https://github.com/benbalter/jekyll-remote-theme) plugin that
+GitHub Pages uses for building sites with GitHub-hosted themes.
