@@ -51,8 +51,9 @@ def test_validate_url_returns_an_http_url_unmodified():
 Here's the [full list of languages supported](https://github.com/rouge-ruby/rouge/wiki/List-of-supported-languages-and-lexers)
 for syntax highlighting.
 
-You can also use [Jekyll's {% raw %}`{% highlight %}`{% endraw %} tag](https://jekyllrb.com/docs/liquid/tags/#code-snippet-highlighting)
-for code highlighting, and this allows you to turn on line numbers with the
+[Backtick-style fenced-code blocks are preferred](https://ben.balter.com/jekyll-style-guide/syntax-highlighting/)
+but you can also use [Jekyll's {% raw %}`{% highlight %}`{% endraw %} tag](https://jekyllrb.com/docs/liquid/tags/#code-snippet-highlighting)
+for code highlighting. {% raw %}`{% highlight %}`{% endraw %} won't render or preview on GitHub.com, but it does allow you to turn on line numbers with the
 `linenos` option. For example: `{% raw %}{% highlight ruby linenos %}{% endraw %} ... {% raw %}{% endhighlight %}{% endraw %}`:
 
 {% highlight ruby linenos %}
