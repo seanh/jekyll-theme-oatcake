@@ -40,11 +40,11 @@ li {
   hyphens: auto;
 }
 
-em {
+em, i {
   font-style: italic;
 }
 
-strong {
+strong, b {
   font-weight: var(--bold-font-weight);
   color: var(--bold-color);
 }
