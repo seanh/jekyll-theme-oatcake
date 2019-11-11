@@ -40,27 +40,7 @@
       <ul class="site-footer__links">
         <li class="site-footer__links-item"><a href="https://raw.githubusercontent.com/{{ site.github.repository_nwo }}/master/{{ page.path }}" title="Source code for this page" name="View the sSource code for this page">View source</a></li>
         <li class="site-footer__links-item"><a href="{{ site.github.repository_url }}/edit/master/{{ page.path }}" title="Edit this page on GitHub" name="Edit this page on GitHub" target="_blank">Edit</a></li>
-        <li class="site-footer__links-item">
-          <label for="new-post" title="Create a new post">New post:</label>
-          <input id="new-post" class="js-new-post site-footer__new-post-input" type="text" spellcheck="true" onchange="doNewPost()" title="Create a new post">
-        </li>
       </ul>
     </footer>
-
-    <script>
-      function doNewPost() {
-        const inputEl = document.querySelector('.js-new-post');
-        const today = new Date();
-        const year = today.getFullYear();
-        const month = ('0' + (today.getMonth() + 1)).slice(-2);
-        const day = ('0' + today.getDate()).slice(-2);
-        const date = year + '-' + month + '-' + day;
-        const title = inputEl.value;
-        const filename = '_posts/' + date + '-' + title.replace(/ /g, '-').toLowerCase() + '.md';
-        const message = 'Add%20%22' + title + '%22';
-        const underline = '%3D'.repeat(title.length);
-        window.open('{{ site.github.repository_url }}/new/master/?filename=' + filename + '&value=---%0Adraft%3A%20true%0Asitemap%3A%20false%0Arobots%3A%20noindex%2C%20nofollow%0A---%0A%0A' + title + '%0A' + underline + '%0A%0A&message=' + message);
-      }
-    </script>
   </body>
 </html>
