@@ -16,3 +16,15 @@ To add a new post form like the one above to your site just call the `new_post_f
 `YOUR_SITE.com/new` whenever you want to create a new post. See
 [`{{ site.github.hostname }}/{{ site.github.repository_nwo }}/new.md`](https://raw.githubusercontent.com/{{ site.github.repository_nwo }}/master/new.md)
 for an example.
+
+This demo site also uses [`_data/footer_links.yaml`](https://raw.githubusercontent.com/{{ site.github.repository_nwo }}/master/_data/footer_links.yaml)
+to add a link in the site footer to the new post page. `footer_links.yaml` is a
+Jekyll [Data File](https://jekyllrb.com/docs/datafiles/) that contains a list
+of links to go in the site footer. To add a link to your `new.md` file add an
+item like this to `footer_links.yaml`:
+
+```yaml
+- url: new
+  text: New
+  title: Create a New Post
+```

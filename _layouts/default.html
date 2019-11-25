@@ -25,9 +25,9 @@
           {% for item in site.data.header_links %}
             <li class="site-header__nav-item">
               {% if item.url == page.url %}
-                <a class="site-header__nav-link site-header__nav-link--active">{{ item.title }}</a>
+                <a class="site-header__nav-link site-header__nav-link--active" href="{{ item.url | relative_url }}" {%- if item.title %}title="{{ item.title }}"{% endif -%}>{{ item.text }}</a>
               {% else %}
-                <a class="site-header__nav-link" href="{{ item.url | relative_url }}">{{ item.title }}</a>
+                <a class="site-header__nav-link" href="{{ item.url | relative_url }}" {%- if item.title %}title="{{ item.title }}"{% endif -%}>{{ item.text }}</a>
               {% endif %}
             </li>
         {% endfor %}
@@ -38,8 +38,13 @@
 
     <footer class="site-footer">
       <ul class="site-footer__links">
-        <li class="site-footer__links-item"><a href="https://raw.githubusercontent.com/{{ site.github.repository_nwo }}/master/{{ page.path }}" title="Source code for this page" name="View the sSource code for this page">View source</a></li>
-        <li class="site-footer__links-item"><a href="{{ site.github.repository_url }}/edit/master/{{ page.path }}" title="Edit this page on GitHub" name="Edit this page on GitHub" target="_blank">Edit</a></li>
+        {% include view_source_link.html %}
+        {% include edit_page_link.html %}
+        {% for item in site.data.footer_links %}
+          <li class="site-footer__links-item">
+            <a href="{{ item.url | relative_url }}" {%- if item.title %}title="{{ item.title }}"{% endif -%}>{{ item.text }}</a>
+          </li>
+        {% endfor %}
       </ul>
     </footer>
   </body>
