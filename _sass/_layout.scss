@@ -135,6 +135,7 @@ body {
 
 .content {
   flex-shrink: 0;
+  padding-bottom: 10rem;
 }
 
 .content__outer-container {
@@ -171,9 +172,13 @@ body {
 }
 
 .site-footer {
-  margin-top: auto;
-  padding-top: 10rem;
+  background-color: #eeeeee;
+  border-top: 1px solid #dddddd;
+  bottom: 0;
+  left: 0;
+  position: fixed;
   text-align: center;
+  width: 100%;
 }
 
 .site-footer__links {
