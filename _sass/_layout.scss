@@ -182,6 +182,12 @@ body {
   width: 100%;
 }
 
+@media all and (max-width: 800px) {
+  .site-footer {
+    display: none;
+  }
+}
+
 .site-footer__left-column {
   float: left;
 }
