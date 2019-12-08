@@ -2,8 +2,6 @@
   <p>
     <a href="{{ post.url | relative_url }}">{{ post.title }}</a>&ensp;
     <span class="muted" style="font-size:smaller;">{{ post.date | date: "%Y" }}</span>
-    {% for tag in post.tags %}
-      <a href="{{ "/tags" | relative_url }}#{{ tag }}" class="pill">{{ tag }}</a>
-    {% endfor %}
+    {% include post_tags.html page=post %}
   </p>
 </li>

@@ -37,15 +37,22 @@
     {% include anchor_headings.html html=content anchorBody="§" anchorClass="anchor" %}
 
     <footer class="site-footer">
-      <ul class="site-footer__links">
-        {% include view_source_link.html %}
-        {% include edit_page_link.html %}
-        {% for item in site.data.footer_links %}
-          <li class="site-footer__links-item">
-            <a href="{{ item.url | relative_url }}" {%- if item.title %}title="{{ item.title }}"{% endif -%}>{{ item.text }}</a>
-          </li>
-        {% endfor %}
-      </ul>
+      <div class="site-footer__inner">
+        <div class="site-footer__left-column">
+          {% include breadcrumbs.html %}
+        </div>
+        <div class="site-footer__right-column">
+          <ul class="site-footer__links">
+            {% include view_source_link.html %}
+            {% include edit_page_link.html %}
+            {% for item in site.data.footer_links %}
+              <li class="site-footer__links-item">
+                <a href="{{ item.url | relative_url }}" {%- if item.title %}title="{{ item.title }}"{% endif -%}>{{ item.text }}</a>
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </footer>
     </footer>
   </body>
 </html>

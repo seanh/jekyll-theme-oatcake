@@ -138,7 +138,8 @@ body {
   padding-bottom: 10rem;
 }
 
-.content__outer-container {
+.content__outer-container,
+.site-footer__inner {
   max-width: 800px;
   margin-left: auto;
   margin-right: auto;
@@ -181,6 +182,21 @@ body {
   width: 100%;
 }
 
+.site-footer__left-column {
+  float: left;
+}
+
+.site-footer__left-column nav {
+  text-overflow: ellipsis;
+  max-width: 480px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.site-footer__right-column {
+  float: right;
+}
+
 .site-footer__links {
   list-style: none;
   margin-bottom: 0;
@@ -188,7 +204,7 @@ body {
 
 .site-footer__links-item {
   display: inline-block;
-  padding-right: 16px;
+  padding-right: 8px;
   margin-left: 0;
 }
 
