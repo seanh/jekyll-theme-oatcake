@@ -1,6 +1,3 @@
----
-layout: page
----
 jekyll-theme-seanh
 ==================
 
