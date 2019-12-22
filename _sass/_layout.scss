@@ -138,8 +138,7 @@ body {
   padding-bottom: 10rem;
 }
 
-.content__outer-container,
-.site-footer__inner {
+.content__outer-container {
   max-width: 800px;
   margin-left: auto;
   margin-right: auto;
@@ -154,7 +153,8 @@ body {
   text-align: center;
 }
 
-.content__inner-container {
+.content__inner-container,
+.site-footer__inner {
   max-width: 650px;
   margin-left: auto;
   margin-right: auto;
