@@ -26,17 +26,13 @@ Using with GitHub Pages
 -----------------------
 
 1. Add the theme to your `_config.yml` file with the `remote_theme` setting, and
-   also add the non-default plugins that the theme needs:
+   also add the [jekyll-feed plugin](https://github.com/jekyll/jekyll-feed)
+   that the theme needs:
 
    ```yaml
    remote_theme: seanh/jekyll-theme-seanh@0.1.3
    plugins:
-     - jekyll-mentions
-     - jemoji
-     - jekyll-avatar
-     - jekyll-feed
-     - jekyll-seo-tag
-     - jekyll-sitemap
+   - jekyll-feed
    ```
    
    <div class="tip" markdown="1">
@@ -49,19 +45,6 @@ Using with GitHub Pages
 
    See [jekyll-remote-theme](https://github.com/benbalter/jekyll-remote-theme) for more about
    how GitHub Pages handles GitHub-hosted Jekyll themes.
-   </div>
-
-   <div class="tip" markdown="1">
-   You also have a bunch more plugins available to you by default on GitHub
-   Pages, in addition to those listed above. See the [list of plugins installed
-   by default on GitHub
-   Pages](https://help.github.com/en/articles/configuring-jekyll-plugins#default-plugins).
-   </div>
-
-   <div class="tip" markdown="1">
-   For a full example configuration with Jekyll settings and settings for a few
-   of the plugins, see
-   [this demo site's `_config.yml`]({{ site.github.repository_url }}/blob/master/_config.yml).
    </div>
 
 2. Include the list of blog posts in a page somewhere, by using this include:
