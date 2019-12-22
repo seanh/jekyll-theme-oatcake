@@ -183,8 +183,9 @@ body {
 }
 
 @media all and (max-width: 800px) {
+  .github-ribbon,
   .site-footer {
-    display: none;
+    display: none !important;
   }
 }
 
