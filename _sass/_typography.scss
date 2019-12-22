@@ -101,8 +101,13 @@ summary {
 }
 
 .site-footer {
-  color: var(--muted-color);
   font-size: smaller;
+}
+
+.site-footer,
+.site-footer b,
+.site-footer strong {
+  color: var(--muted-color);
 }
 
 .site-footer a {

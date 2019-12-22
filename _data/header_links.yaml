@@ -1,4 +1,4 @@
-- title: Home
-  url: /
-- title: Posts
-  url: /posts
+- url: /
+  text: Home
+- url: /posts
+  text: Posts
