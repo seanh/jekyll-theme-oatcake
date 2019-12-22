@@ -66,17 +66,13 @@ Using with GitHub Pages
 
 2. Include the list of blog posts in a page somewhere, by using this include:
 
-       {% raw %}{% include post_list.html %}{% endraw %}
+   ```liquid
+   {% raw %}{% include post_list.html %}{% endraw %}
+   ```
 
    For example you might want to include it on your front page, or on a `/posts` page.
    See [posts.md]({{ site.github.repository_url }}/blob/master/posts.md)
    for an example.
-
-3. If you plan on using tags then copy [tags.md]({{ site.github.repository_url }}/blob/master/tags.md),
-   the tags page, to your site.
-
-4. If you want to have a page listing all your draft posts then copy
-   [drafts.md]({{ site.github.repository_url }}/blob/master/drafts.md) to your site.
 
 Contributing
 ------------
