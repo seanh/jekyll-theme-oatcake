@@ -177,11 +177,6 @@ body {
 }
 
 .site-footer {
-  background-color: #eeeeee;
-  border-top: 1px solid #dddddd;
-  bottom: 0;
-  left: 0;
-  position: fixed;
   text-align: center;
   width: 100%;
 }
@@ -201,6 +196,7 @@ body {
 .site-footer__links-item {
   display: inline-block;
   margin-left: 0;
+  padding-right: 16px;
 }
 
 .site-footer__links-item:last-child {
