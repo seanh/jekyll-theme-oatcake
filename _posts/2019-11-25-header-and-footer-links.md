@@ -1,3 +1,7 @@
+---
+category: example-category
+---
+
 Header and Footer Links
 =======================
 

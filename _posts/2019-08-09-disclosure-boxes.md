@@ -1,3 +1,7 @@
+---
+tags: [Example Tag]
+---
+
 Disclosure Boxes: `<details>` and `<summary>`
 =============================================
 
