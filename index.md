@@ -10,9 +10,9 @@ friendly, that doesn't get in the way of reading or writing. It has a simple
 layout, uninteresting colours, and a system font stack that matches with the
 user's OS.
 
-The theme also aims to delight with
-[nice typography](_posts/2019-08-01-basics.md)
-and features like
+The theme has
+[nice basic typography](_posts/2019-08-01-basics.md)
+and lots of typographical extras like
 [figures](_posts/2019-08-02-figures.md),
 [code highlighting](_posts/2019-08-03-code-blocks.md),
 [`<kbd>` and `<samp>` styling](_posts/2019-08-05-kbd-and-samp.md),
@@ -22,6 +22,10 @@ and features like
 [lead paragraphs](_posts/2019-09-09-lead-paragraphs.md),
 [badges](_posts/2019-09-13-badges-and-pills.md)
 and more.
+
+It also has convenient links for [creating](_posts/2019-11-11-new-post-form.md)
+and [editing](_posts/2019-11-11-edit-page-and-view-source-buttons.md) pages
+and supports [drafts](_posts/2019-12-22-drafts.md) even on GitHub Pages.
 
 See the posts for the [full list of features](posts.md).
 
