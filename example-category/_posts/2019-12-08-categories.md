@@ -29,17 +29,6 @@ If you have `:categories` in your [`permalink` setting](https://jekyllrb.com/doc
 (all of Jekyll's [built-in permalink formats](https://jekyllrb.com/docs/permalinks/#built-in-formats) do)
 then if a post has a category the category will form part of the post's URL.
 
-**Categories can appear in breadcrumbs, tags can't.**
-
-Since [breadcrumbs](./2019-12-08-breadcrumbs.md) are based on the post's URL,
-if you have categories in the URLs they'll appear in the breadcrumbs as well.
-If the category has a page (see below) then the breadcrumb will link to the
-category's page. For example here are this page's breadcrumbs:
-
-<p>
-  {% include breadcrumbs.html %}
-</p>
-
 Categories aren't hierarchical
 ------------------------------
 
@@ -76,9 +65,6 @@ second post belongs to `"gar"` and `"bar"`:
 
 You can create a page for a category
 ------------------------------------
-
-You can create a page for a category, and breadcrumbs will link to that
-category page whenever the category appears in a breadcrumb.
 
 For example one of this post's categories is `"example-category"`.
 To create a category page for `"example-category"` you can either

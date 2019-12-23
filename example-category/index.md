@@ -1,7 +1,3 @@
----
-breadcrumb_text: Example Category
----
-
 Example Category
 ================
 
