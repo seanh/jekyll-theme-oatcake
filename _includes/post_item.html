@@ -2,6 +2,5 @@
   <p>
     <a href="{{ post.url | relative_url }}">{{ post.title }}</a>&ensp;
     <span class="muted" style="font-size:smaller;">{{ post.date | date: "%Y" }}</span>
-    {% include post_tags.html page=post %}
   </p>
 </li>

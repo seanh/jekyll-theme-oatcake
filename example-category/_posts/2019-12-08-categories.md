@@ -40,15 +40,6 @@ category's page. For example here are this page's breadcrumbs:
   {% include breadcrumbs.html %}
 </p>
 
-**Tags appear as pills next to the post in post listings and on the post's own page, categories don't.**
-
-If a tag has a page (see below) then its pill will be linked to its page.
-For example, here as this post's tags:
-
-<p>
-  {% include post_tags.html page=page %}
-</p>
-
 Categories aren't hierarchical
 ------------------------------
 
