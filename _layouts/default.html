@@ -34,7 +34,7 @@
         </ul>
       </nav>
     </header>
-    {% include anchor_headings.html html=content anchorBody="§" anchorClass="anchor" %}
+    {{ content }}
 
     <footer class="site-footer">
       <div class="site-footer__inner">
@@ -49,5 +49,17 @@
         </ul>
       </footer>
     </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.2.2/anchor.min.js"></script>
+    <script>
+       anchors.options.placement = "left";
+       anchors.options.class = "anchor";
+       anchors.add(".content__inner-container h1");
+       anchors.add(".content__inner-container h2");
+       anchors.add(".content__inner-container h3");
+       anchors.add(".content__inner-container h4");
+       anchors.add(".content__inner-container h5");
+       anchors.add(".content__inner-container h6");
+     </script>
   </body>
 </html>
