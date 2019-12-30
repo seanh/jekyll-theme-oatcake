@@ -2,6 +2,7 @@
   <h1 class="page-header__title">{{ page.title }}</h1>
   <div class="meta">
     {% include breadcrumbs.html full_stop=page.date %}
+    {% include tags.html %}
     {% if site.author and include.author %}
       <a rel="author" href="{{ "/" | relative_url }}">{{ site.author }}</a>,
     {% endif %}
