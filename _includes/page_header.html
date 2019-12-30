@@ -2,8 +2,8 @@
   <h1 class="content__title">{{ page.title }}</h1>
   <div class="content__meta">
     {% include breadcrumbs.html full_stop=page.date %}
-    {% if include.author %}
-      <a href="{{ "/" | relative_url }}">Sean Hammond</a>,
+    {% if site.author and include.author %}
+      <a rel="author" href="{{ "/" | relative_url }}">{{ site.author }}</a>,
     {% endif %}
     {% if page.date %}
       <time datetime="{{ page.date | date: '%Y-%m-%d' }}" pubdate>{{ page.date | date: "%b %Y" }}</time>.
