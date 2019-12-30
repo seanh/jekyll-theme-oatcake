@@ -1,0 +1,27 @@
+{% assign tags = "" | split: "" %}
+{% for tag in page.tags %}
+  {% assign tag_slug = tag | replace: " ", "-" | downcase | url_encode %}
+  {% assign tag_url = "/tags/" | append: tag_slug | append: "/" %}
+
+  {% assign tag_page = nil %}
+  {% for page in site.pages %}
+    {% if page.url == tag_url %}
+      {% assign tag_page = page %}
+      {% break %}
+    {% endif %}
+  {% endfor %}
+
+  {% if tag_page %}
+    {% capture tag_str %}<a href="{{ tag_page.url | relative_url }}">{{ tag }}</a>{% endcapture %}
+  {% else %}
+    {% capture tag_str %}<a>{{ tag }}</a>{% endcapture %}
+  {% endif %}
+
+  {% assign tag_str = tag_str | split: "🗾" %}
+  {% assign tags = tags | concat: tag_str %}
+{% endfor %}
+
+{% if tags != empty %}
+  <nav style="display: inline-block;">Tags: {{ tags | array_to_sentence_string }}.</nav>
+{% endif %}
+

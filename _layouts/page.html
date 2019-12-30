@@ -3,11 +3,9 @@ layout: default
 ---
 <main class="content">
   <div class="content__outer-container">
-    <header class="content__header">
-      <h1 class="content__title">{{ page.title }}</h1>
-    </header>
-    <div class="content__inner-container">
+    {% include page_header.html %}
+    <div class="inner-container">
       {{ content }}
-    </div><!-- content__inner-container -->
+    </div><!-- inner-container -->
   </div><!-- content__outer-container -->
 </main>

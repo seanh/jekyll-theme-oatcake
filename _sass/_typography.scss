@@ -15,8 +15,8 @@ p,
 ul,
 ol,
 figure,
-.content__inner-container pre,
-.content__inner-container iframe,
+.inner-container pre,
+.inner-container iframe,
 dd,
 details,
 .scroll,
@@ -88,30 +88,19 @@ summary {
   color: var(--muted-color);
 }
 
-.post-footer {
-  color: var(--muted-color);
-  font-size: var(--small-font-size);
+.meta {
+  font-size: smaller;
   line-height: var(--small-line-height);
 }
 
-.post-footer__link {
-  color: var(--muted-color);
-  border-bottom: none;
-  text-decoration: none;
-}
-
-.site-footer {
-  font-size: smaller;
-}
-
-.site-footer,
-.site-footer b,
-.site-footer strong {
+.meta,
+.meta b,
+.meta strong {
   color: var(--muted-color);
 }
 
-.site-footer a {
-  border-bottom: none;
+.meta a {
+  border-bottom: 1px solid #ccc;
   color: inherit;
 }
 

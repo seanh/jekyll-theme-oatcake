@@ -1,0 +1,143 @@
+{% comment %}
+Render the breadcrumbs for the current page or a given page.
+
+Usage
+=====
+
+To render the breadcrumbs for the current page:
+
+  {% include breadcrumbs.html %}
+
+To render the breadcrumbs for another page:
+
+  {% include breadcrumbs.html page=another_page %}
+
+To render breadcrumbs with the home page and date omitted (see Options below
+for more options):
+
+  {% include breadcrumbs.html omit_home=true omit_date=true %}
+
+Options
+=======
+
+omit_home
+: Don't include the home page as the first breadcrumb.
+
+omit_collection
+: Don't include the page's collection ("posts" by default, for posts) in the breadcrumbs.
+
+omit_categories
+: Don't include the page's categories in the breadcrumbs.
+
+omit_date
+: Don't include the post's date (year, month and day) in the breadcrumbs.
+
+omit_year
+: Don't include the post's year in the breadcrumbs.
+
+omit_month
+: Don't include the post's month in the breadcrumbs.
+
+omit_date
+: Don't include the post's date in the breadcrumbs.
+{% endcomment %}
+
+{% assign omit_home = include.omit_home %}
+{% if omit_home == nil %}
+  {% assign omit_home = site.breadcrumbs_omit_home %}
+{% endif %}
+
+{% assign omit_collection = include.omit_collection %}
+{% if omit_collection == nil %}
+  {% assign omit_collection = site.breadcrumbs_omit_collection %}
+{% endif %}
+
+{% assign omit_categories = include.omit_categories %}
+{% if omit_categories == nil %}
+  {% assign omit_categories = site.breadcrumbs_omit_categories %}
+{% endif %}
+
+{% assign omit_date = include.omit_date %}
+{% if omit_date == nil %}
+  {% assign omit_date = site.breadcrumbs_omit_date %}
+{% endif %}
+
+{% assign omit_year = include.omit_year %}
+{% if omit_year == nil %}
+  {% assign omit_year = site.breadcrumbs_omit_year %}
+{% endif %}
+
+{% assign omit_month = include.omit_month %}
+{% if omit_month == nil %}
+  {% assign omit_month = site.breadcrumbs_omit_month %}
+{% endif %}
+
+{% assign omit_day = include.omit_day %}
+{% if omit_day == nil %}
+  {% assign omit_day = site.breadcrumbs_omit_day %}
+{% endif %}
+
+<nav style="display: inline-block;">
+  {% if page.url == "/" %}
+    {% assign is_front_page = true %}
+  {% else %}
+    {% assign is_front_page = false %}
+  {% endif %}
+
+  {% unless is_front_page %}
+    {% assign page = include.page | default: page %}
+    {% unless omit_home %}
+      {% include breadcrumb_text.html url="/" default="Home" %}
+    {% endunless %}
+  {% endunless %}
+
+  {% unless omit_collection or page.collection == nil %}
+    {% assign collection_slug = page.collection | replace: " ", "-" | downcase | url_encode %}
+    {% assign collection_page_url = "/" | append: collection_slug | append: "/" %}
+    {% include breadcrumb_text.html url=collection_page_url default=page.collection %}
+  {% endunless %}
+
+  {% unless omit_categories %}
+    {% for category in page.categories %}
+      {% assign category_slug = category | replace: " ", "-" | downcase | url_encode %}
+      {% assign category_page_url = "/" | append: category_slug | append: "/" %}
+      {% include breadcrumb_text.html url=category_page_url default=category %}
+    {% endfor %}
+  {% endunless %}
+
+  {% unless omit_date or page.date == nil %}
+    {% assign year = page.date | date: "%Y" %}
+    {% assign year_page_url = "/" | append: year | append: "/" %}
+    {% assign month_int = page.date | date: "%m" %}
+    {% assign month_page_url = year_page_url | append: month_int | append: "/" %}
+    {% assign day_int = page.date | date: "%d" %}
+    {% assign day_page_url = month_page_url | append: day_int | append: "/" %}
+
+    {% unless omit_year %}
+      {% include breadcrumb_text.html url=year_page_url default=year %}
+    {% endunless %}
+
+    {% unless omit_month %}
+      {% assign month_str = page.date | date: "%b" %}
+      {% include breadcrumb_text.html url=month_page_url default=month_str %}
+    {% endunless %}
+
+    {% unless omit_day %}
+      {% assign day_str = page.date | date: "%e" %}
+      {% include breadcrumb_text.html url=day_page_url default=day_str %}
+    {% endunless %}
+  {% endunless %}
+
+  {% unless is_front_page %}
+    {% if page.title == nil %}
+      {% assign title = page.name %}
+    {% else %}
+      {% assign title = page.title %}
+    {% endif %}
+    {% if include.full_stop %}
+      <strong>{{ title }}</strong>.
+    {% else %}
+      <strong>{{ title }}</strong>
+    {% endif %}
+  {% endunless %}
+</nav>
