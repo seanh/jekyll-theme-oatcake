@@ -4,12 +4,9 @@ layout: default
 <main>
   <article class="content">
     <div class="content__outer-container">
-      {% include page_header.html %}
+      {% include page_header.html author=true %}
       <div class="content__inner-container">
         {{ content }}
-        <footer class="post-footer">
-            — <a class="post-footer__link" href="{{ "/" | relative_url }}">Sean Hammond</a>
-        </footer>
       </div><!-- content__inner-container -->
     </div><!-- content__outer-container -->
   </article>

@@ -129,8 +129,8 @@ omit_date
   {% endunless %}
 
   {% unless is_front_page %}
-    {% if include.comma %}
-      <strong>{{ page.title }}</strong>,
+    {% if include.full_stop %}
+      <strong>{{ page.title }}</strong>.
     {% else %}
       <strong>{{ page.title }}</strong>
     {% endif %}

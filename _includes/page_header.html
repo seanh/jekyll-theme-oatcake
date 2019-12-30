@@ -1,7 +1,10 @@
 <header class="content__header">
   <h1 class="content__title">{{ page.title }}</h1>
   <div class="content__meta">
-    {% include breadcrumbs.html comma=page.date %}
+    {% include breadcrumbs.html full_stop=page.date %}
+    {% if include.author %}
+      <a href="{{ "/" | relative_url }}">Sean Hammond</a>,
+    {% endif %}
     {% if page.date %}
       <time datetime="{{ page.date | date: '%Y-%m-%d' }}" pubdate>{{ page.date | date: "%b %Y" }}</time>.
     {% endif %}
