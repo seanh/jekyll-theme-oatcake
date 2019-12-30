@@ -15,8 +15,8 @@ p,
 ul,
 ol,
 figure,
-.content__inner-container pre,
-.content__inner-container iframe,
+.inner-container pre,
+.inner-container iframe,
 dd,
 details,
 .scroll,
@@ -88,17 +88,18 @@ summary {
   color: var(--muted-color);
 }
 
-.site-footer {
+.meta {
   font-size: smaller;
+  line-height: var(--small-line-height);
 }
 
-.site-footer,
-.site-footer b,
-.site-footer strong {
+.meta,
+.meta b,
+.meta strong {
   color: var(--muted-color);
 }
 
-.site-footer a {
+.meta a {
   border-bottom: none;
   color: inherit;
 }

@@ -1,6 +1,6 @@
-<header class="content__header">
-  <h1 class="content__title">{{ page.title }}</h1>
-  <div class="content__meta">
+<header class="page-header inner-container">
+  <h1 class="page-header__title">{{ page.title }}</h1>
+  <div class="meta">
     {% include breadcrumbs.html full_stop=page.date %}
     {% if site.author and include.author %}
       <a rel="author" href="{{ "/" | relative_url }}">{{ site.author }}</a>,

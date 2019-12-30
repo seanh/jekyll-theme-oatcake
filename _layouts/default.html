@@ -36,8 +36,8 @@
     </header>
     {{ content }}
 
-    <footer class="site-footer">
-      <div class="site-footer__inner">
+    <footer class="site-footer meta">
+      <div class="inner-container">
         <ul class="site-footer__links">
           {% include view_source_link.html %}
           {% include edit_page_link.html %}
@@ -54,12 +54,12 @@
     <script>
        anchors.options.placement = "left";
        anchors.options.class = "anchor";
-       anchors.add(".content__inner-container h1");
-       anchors.add(".content__inner-container h2");
-       anchors.add(".content__inner-container h3");
-       anchors.add(".content__inner-container h4");
-       anchors.add(".content__inner-container h5");
-       anchors.add(".content__inner-container h6");
+       anchors.add(".inner-container h1");
+       anchors.add(".inner-container h2");
+       anchors.add(".inner-container h3");
+       anchors.add(".inner-container h4");
+       anchors.add(".inner-container h5");
+       anchors.add(".inner-container h6");
      </script>
   </body>
 </html>
