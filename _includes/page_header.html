@@ -2,5 +2,8 @@
   <h1 class="content__title">{{ page.title }}</h1>
   <div class="content__meta">
     {% include breadcrumbs.html comma=page.date %}
+    {% if page.date %}
+      <time datetime="{{ page.date | date: '%Y-%m-%d' }}" pubdate>{{ page.date | date: "%b %Y" }}</time>.
+    {% endif %}
   </div>
 </header>
