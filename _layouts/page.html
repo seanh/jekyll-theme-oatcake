@@ -1,11 +1,14 @@
 ---
 layout: default
 ---
-<main class="content">
-  <div class="content__outer-container">
-    {% include page_header.html %}
-    <div class="anchors inner-container">
-      {{ content }}
-    </div><!-- inner-container -->
-  </div><!-- content__outer-container -->
+<main>
+  <article class="content">
+    <div class="content__outer-container">
+      {% assign show_author = layout.show_author | default: false %}
+      {% include page_header.html show_author=show_author %}
+      <div class="anchors inner-container">
+        {{ content }}
+      </div><!-- inner-container -->
+    </div><!-- content__outer-container -->
+  </article>
 </main>

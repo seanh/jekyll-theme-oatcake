@@ -3,7 +3,7 @@
   <div class="meta">
     {% include breadcrumbs.html full_stop=page.date %}
     {% include tags.html %}
-    {% if site.author and include.author %}
+    {% if site.author and include.show_author %}
       <a rel="author" href="{{ "/" | relative_url }}">{{ site.author }}</a>,
     {% endif %}
     {% if page.date %}
