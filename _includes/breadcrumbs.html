@@ -77,67 +77,87 @@ omit_date
   {% assign omit_day = site.breadcrumbs_omit_day %}
 {% endif %}
 
-<nav style="display: inline-block;">
-  {% if page.url == "/" %}
-    {% assign is_front_page = true %}
+{% assign breadcrumbs = "" | split: "" %}
+
+{% if page.url == "/" %}
+  {% assign is_front_page = true %}
+{% else %}
+  {% assign is_front_page = false %}
+{% endif %}
+
+{% unless is_front_page %}
+  {% assign page = include.page | default: page %}
+  {% unless omit_home %}
+    {% capture breadcrumb_text %}{% include breadcrumb_text.html url="/" default="Home" %}{% endcapture %}
+    {% assign breadcrumb_text = breadcrumb_text | split: "🗾" %}
+    {% assign breadcrumbs = breadcrumbs | concat: breadcrumb_text %}
+  {% endunless %}
+{% endunless %}
+
+{% unless omit_collection or page.collection == nil %}
+  {% assign collection_slug = page.collection | replace: " ", "-" | downcase | url_encode %}
+  {% assign collection_page_url = "/" | append: collection_slug | append: "/" %}
+  {% capture breadcrumb_text %}{% include breadcrumb_text.html url=collection_page_url default=page.collection %}{% endcapture %}
+  {% assign breadcrumb_text = breadcrumb_text | split: "🗾" %}
+  {% assign breadcrumbs = breadcrumbs | concat: breadcrumb_text %}
+{% endunless %}
+
+{% unless omit_categories %}
+  {% for category in page.categories %}
+    {% assign category_slug = category | replace: " ", "-" | downcase | url_encode %}
+    {% assign category_page_url = "/" | append: category_slug | append: "/" %}
+    {% capture breadcrumb_text %}{% include breadcrumb_text.html url=category_page_url default=category %}{% endcapture %}
+    {% assign breadcrumb_text = breadcrumb_text | split: "🗾" %}
+    {% assign breadcrumbs = breadcrumbs | concat: breadcrumb_text %}
+  {% endfor %}
+{% endunless %}
+
+{% unless omit_date or page.date == nil %}
+  {% assign year = page.date | date: "%Y" %}
+  {% assign year_page_url = "/" | append: year | append: "/" %}
+  {% assign month_int = page.date | date: "%m" %}
+  {% assign month_page_url = year_page_url | append: month_int | append: "/" %}
+  {% assign day_int = page.date | date: "%d" %}
+  {% assign day_page_url = month_page_url | append: day_int | append: "/" %}
+
+  {% unless omit_year %}
+    {% capture breadcrumb_text %}{% include breadcrumb_text.html url=year_page_url default=year %}{% endcapture %}
+    {% assign breadcrumb_text = breadcrumb_text | split: "🗾" %}
+    {% assign breadcrumbs = breadcrumbs | concat: breadcrumb_text %}
+  {% endunless %}
+
+  {% unless omit_month %}
+    {% assign month_str = page.date | date: "%b" %}
+    {% capture breadcrumb_text %}{% include breadcrumb_text.html url=month_page_url default=month_str %}{% endcapture %}
+    {% assign breadcrumb_text = breadcrumb_text | split: "🗾" %}
+    {% assign breadcrumbs = breadcrumbs | concat: breadcrumb_text %}
+  {% endunless %}
+
+  {% unless omit_day %}
+    {% assign day_str = page.date | date: "%e" %}
+    {% capture breadcrumb_text %}{% include breadcrumb_text.html url=day_page_url default=day_str %}{% endcapture %}
+    {% assign breadcrumb_text = breadcrumb_text | split: "🗾" %}
+    {% assign breadcrumbs = breadcrumbs | concat: breadcrumb_text %}
+  {% endunless %}
+{% endunless %}
+
+{% unless is_front_page %}
+  {% if page.title == nil %}
+    {% assign title = page.name %}
   {% else %}
-    {% assign is_front_page = false %}
+    {% assign title = page.title %}
   {% endif %}
+  {% if include.full_stop %}
+    {% capture breadcrumb_text %}<strong>{{ title }}</strong>.{% endcapture %}
+  {% else %}
+    {% capture breadcrumb_text %}<strong>{{ title }}</strong>{% endcapture %}
+  {% endif %}
+  {% assign breadcrumb_text = breadcrumb_text | split: "🗾" %}
+  {% assign breadcrumbs = breadcrumbs | concat: breadcrumb_text %}
+{% endunless %}
 
-  {% unless is_front_page %}
-    {% assign page = include.page | default: page %}
-    {% unless omit_home %}
-      {% include breadcrumb_text.html url="/" default="Home" %}
-    {% endunless %}
-  {% endunless %}
-
-  {% unless omit_collection or page.collection == nil %}
-    {% assign collection_slug = page.collection | replace: " ", "-" | downcase | url_encode %}
-    {% assign collection_page_url = "/" | append: collection_slug | append: "/" %}
-    {% include breadcrumb_text.html url=collection_page_url default=page.collection %}
-  {% endunless %}
-
-  {% unless omit_categories %}
-    {% for category in page.categories %}
-      {% assign category_slug = category | replace: " ", "-" | downcase | url_encode %}
-      {% assign category_page_url = "/" | append: category_slug | append: "/" %}
-      {% include breadcrumb_text.html url=category_page_url default=category %}
-    {% endfor %}
-  {% endunless %}
-
-  {% unless omit_date or page.date == nil %}
-    {% assign year = page.date | date: "%Y" %}
-    {% assign year_page_url = "/" | append: year | append: "/" %}
-    {% assign month_int = page.date | date: "%m" %}
-    {% assign month_page_url = year_page_url | append: month_int | append: "/" %}
-    {% assign day_int = page.date | date: "%d" %}
-    {% assign day_page_url = month_page_url | append: day_int | append: "/" %}
-
-    {% unless omit_year %}
-      {% include breadcrumb_text.html url=year_page_url default=year %}
-    {% endunless %}
-
-    {% unless omit_month %}
-      {% assign month_str = page.date | date: "%b" %}
-      {% include breadcrumb_text.html url=month_page_url default=month_str %}
-    {% endunless %}
-
-    {% unless omit_day %}
-      {% assign day_str = page.date | date: "%e" %}
-      {% include breadcrumb_text.html url=day_page_url default=day_str %}
-    {% endunless %}
-  {% endunless %}
-
-  {% unless is_front_page %}
-    {% if page.title == nil %}
-      {% assign title = page.name %}
-    {% else %}
-      {% assign title = page.title %}
-    {% endif %}
-    {% if include.full_stop %}
-      <strong>{{ title }}</strong>.
-    {% else %}
-      <strong>{{ title }}</strong>
-    {% endif %}
-  {% endunless %}
-</nav>
+{% if breadcrumbs != empty %}
+  <nav style="display: inline-block;">
+    {% for breadcrumb in breadcrumbs %}{{ breadcrumb }}{% endfor %}
+  </nav>
+{% endif %}
