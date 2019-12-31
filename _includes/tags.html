@@ -14,7 +14,7 @@
   {% if tag_page %}
     {% capture tag_str %}<a href="{{ tag_page.url | relative_url }}">{{ tag }}</a>{% endcapture %}
   {% else %}
-    {% capture tag_str %}<a>{{ tag }}</a>{% endcapture %}
+    {% capture tag_str %}{{ tag }}{% endcapture %}
   {% endif %}
 
   {% assign tag_str = tag_str | split: "🗾" %}
