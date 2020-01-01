@@ -1,9 +1,3 @@
 <header class="page-header inner-container">
   <h1 class="page-header__title">{{ page.title }}</h1>
-  {% capture meta %}{% include breadcrumbs.html %}{% endcapture %}
-  {% if meta | strip != "" %}
-    <div class="meta" style="padding-top:13px;">
-      {{ meta }}
-    </div>
-  {% endif %}
 </header>

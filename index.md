@@ -1,6 +1,5 @@
 ---
 layout: page
-breadcrumb_text: Home
 ---
 
 jekyll-theme-seanh

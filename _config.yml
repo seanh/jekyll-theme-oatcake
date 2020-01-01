@@ -14,7 +14,6 @@ sass:
 title: jekyll-theme-seanh
 
 github_ribbon: true
-breadcrumbs_omit_date: true
 
 relative_links:
   enabled:     true
