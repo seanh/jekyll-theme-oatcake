@@ -1,5 +1,8 @@
 <ul style="list-style-type: none;">
   {% for post in site.posts %}
+    {% if post.nolist %}
+      {% unless include.all %}{% continue %}{% endunless %}
+    {% endif %}
     {% if include.drafts %}
       {% unless post.draft %}{% continue %}{% endunless %}
     {% else %}
