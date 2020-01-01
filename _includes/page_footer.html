@@ -5,7 +5,6 @@
   {%- if page.date %}
     <time datetime="{{ page.date | date: '%Y-%m-%d' }}" pubdate>{{ page.date | date: "%b %Y" }}</time>
   {% endif -%}
-  {% include tags.html %}
 {% endcapture %}
 
 {%- if footer_contents | strip != "" %}

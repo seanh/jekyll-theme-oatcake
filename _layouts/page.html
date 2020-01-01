@@ -1,8 +1,8 @@
 ---
 layout: default
 ---
-<main>
-  <article class="content">
+<main class="content">
+  <article>
     <div class="content__outer-container">
       {% assign show_author = layout.show_author | default: false %}
       {% include page_header.html show_author=show_author %}
@@ -12,4 +12,20 @@ layout: default
       </div><!-- inner-container -->
     </div><!-- content__outer-container -->
   </article>
+
+  <div class="inner-container" style="margin-top: 52px;">
+    {% for category in page.categories %}
+      {% if site.categories[category].size > 1 %}
+        <h5>All posts in category {% include category_link.html category=category %}:</h5>
+        {% include post_list.html category=category all=true %}
+      {% endif %}
+    {% endfor %}
+
+    {% for tag in page.tags %}
+      {% if site.tags[tag].size > 1 %}
+      <h5>All posts tagged {% include tag_link.html tag=tag %}:</h5>
+        {% include post_list.html tag=tag all=true %}
+      {% endif %}
+    {% endfor %}
+  </div>
 </main>

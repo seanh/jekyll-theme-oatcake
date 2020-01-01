@@ -1,7 +1,3 @@
----
-categories: [Example Category, Another Category]
----
-
 Page and post headings have a line of navigation breadcrumbs beneath the title.
 For example, here are this page's breadcrumbs:
 

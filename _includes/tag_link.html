@@ -1,0 +1,29 @@
+{% comment %}
+Render a link to a tag.
+
+If there exists a page with URL /tags/TAG for the given tag then render a link
+to that page, with the tag name as the link text.
+
+If there's no page for the tag then just render the tag name (not a link).
+
+Usage
+=====
+
+  {% include tag_link.html tag=some_tag %}
+{% endcomment %}
+{%- assign tag_slug = include.tag | replace: " ", "-" | downcase | url_encode -%}
+{%- assign tag_url = "/tags/" | append: tag_slug | append: "/" -%}
+
+{%- assign tag_page = nil -%}
+{%- for page in site.pages -%}
+  {% if page.url == tag_url %}
+    {% assign tag_page = page %}
+    {% break %}
+  {% endif %}
+{%- endfor -%}
+
+{%- if tag_page -%}
+  <a href="{{ tag_page.url | relative_url }}">{{ tag }}</a>
+{%- else -%}
+  “{{ tag }}”
+{%- endif -%}

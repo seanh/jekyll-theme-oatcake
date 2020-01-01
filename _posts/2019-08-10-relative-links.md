@@ -1,7 +1,3 @@
----
-tags: [Example Tag]
----
-
 Relative Links
 ==============
 

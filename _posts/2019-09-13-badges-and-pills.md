@@ -4,8 +4,6 @@ Badges and Pills
 The theme supports Bootstrap-style badges and pills with the CSS classes
 `badge` and `pill`: <span class="badge">badge</span> <span class="pill">pill</span>
 
-These are used to display [post tags](../example-category/_posts/2019-12-08-categories.md).
-
 There are also the variations
 `badge-primary`, `badge-secondary`, `badge-success`, `badge-danger`,
 `badge-warning`, `badge-info`, `badge-light`, `badge-dark`, `pill-primary`,

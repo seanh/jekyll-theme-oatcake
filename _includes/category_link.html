@@ -1,0 +1,30 @@
+{% comment %}
+Render a link to a category.
+
+If there exists a page with URL /CATEGORY for the given category then render a
+link to that page, with the category name as the link text.
+
+If there's no page for the category then just render the category name (not a link).
+
+Usage
+=====
+
+  {% include category_link.html category=some_category %}
+{% endcomment %}
+
+{%- assign category_slug = include.category | replace: " ", "-" | downcase | url_encode -%}
+{%- assign category_url = "/" | append: category_slug | append: "/" -%}
+
+{%- assign category_page = nil -%}
+{%- for page in site.pages -%}
+  {% if page.url == category_url %}
+    {% assign category_page = page %}
+    {% break %}
+  {% endif %}
+{%- endfor -%}
+
+{%- if category_page -%}
+  <a href="{{ category_page.url | relative_url }}">{{ category }}</a>
+{%- else -%}
+  “{{ category }}”
+{%- endif -%}
