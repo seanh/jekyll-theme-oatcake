@@ -1,6 +1,6 @@
 ---
 tag: [Favorite Recipes, Dinosaurs, foo]
-category: [Programming, Web Design, bar]
+category: [programming, web-design, bar]
 ---
 
 Categories and Tags
@@ -22,8 +22,10 @@ These lists only appear if the category or tag has more than one post.
 You can create category and tag pages
 -------------------------------------
 
-If your site has a page with the URL `/example-category/` then the `Example Category` category will link to that
-page, whenever the `Example Category` category appears in a post's footer.
+If your site has a page with the URL `/example-category/` then the `example-category` category will link to that
+page, whenever the `example-category` category appears in a post's footer.
+You can create such a page by creating a `example-category.md` or
+`example-category/index.md` file.
 You might use this page to [list all posts in the category](./2019-12-22-post-lists.md#listing-posts-in-a-category).
 
 The `/example-category/` URL is nice:
@@ -32,12 +34,9 @@ if your [`permalink` setting](https://jekyllrb.com/docs/permalinks/) starts with
 then the permalinks of posts in `example-category` will start with `/example-category/`,
 so they'll be sub-URLs of the category's page.
 
-The category page's URL must be equal to the name of the category with spaces
-replaced by `-`'s and uppercase letters downcased. For example a category named
-`Example Category` would match a page with a `/example-category/` URL.
-
-You can create such a page by creating a `example-category.md` or
-`example-category/index.md` file.
+If a category page exists then that page's title will be used, instead of the
+category name itself, as the label for the category when listing it at the
+bottoms of posts.
 
 For an example category page see this site's
 [`web-design.md`]({{ site.github.repository_url }}/blob/master/web-design.md) file,
@@ -48,6 +47,10 @@ Creating tag pages works similarly, except that they all go in a `tags` folder:
 * To create a page for the `Example Tag` tag, create either a `tags/example-tag.md` or
   `tags/example-tag/index.md` file.
   Whenever the `Example Tag` tag appears in a post's footer it'll be linked to the tag page.
+
+  The tag page's URL must be equal to the name of the tag with spaces
+  replaced by `-`'s and uppercase letters downcased. For example a tag named
+  `Example tag` would match a page with a `/example-tag/` URL.
 
 * You can use the tag page to [list all posts with the tag](./2019-12-22-post-lists.md#listing-posts-with-a-tag).
 
@@ -64,7 +67,7 @@ For example:
 
 ```yaml
 ---
-category: Example Category
+category: example-category
 ---
 ```
 
@@ -74,7 +77,7 @@ For example:
 
 ```yaml
 ---
-categories: [Programming, Web Design, bar]
+categories: [programming, web-design, bar]
 ---
 ```
 

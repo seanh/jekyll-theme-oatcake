@@ -1,5 +1,5 @@
 ---
-categories: [Web Design]
+categories: [web-design]
 nolist: true
 ---
 

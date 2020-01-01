@@ -1,5 +1,5 @@
 ---
-categories: [Programming]
+categories: [programming]
 nolist: true
 ---
 
