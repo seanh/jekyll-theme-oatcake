@@ -147,11 +147,7 @@ omit_date
   {% else %}
     {% assign title = page.title %}
   {% endif %}
-  {% if include.full_stop %}
-    {% capture breadcrumb_text %}<strong>{{ title }}</strong>.{% endcapture %}
-  {% else %}
-    {% capture breadcrumb_text %}<strong>{{ title }}</strong>{% endcapture %}
-  {% endif %}
+  {% capture breadcrumb_text %}<strong>{{ title }}</strong>{% endcapture %}
   {% assign breadcrumb_text = breadcrumb_text | split: "🗾" %}
   {% assign breadcrumbs = breadcrumbs | concat: breadcrumb_text %}
 {% endunless %}
