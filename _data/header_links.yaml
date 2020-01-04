@@ -2,3 +2,7 @@
   text: Home
 - url: /posts/
   text: Posts
+- url: https://github.com/seanh/jekyll-theme-seanh/issues
+  text: Issues
+- url: https://github.com/seanh/jekyll-theme-seanh/releases
+  text: Releases
