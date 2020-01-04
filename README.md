@@ -2,7 +2,7 @@ jekyll-theme-seanh
 ==================
 
 This is the [GitHub Pages](https://pages.github.com/) theme that I use on
-[seanh.cc](https://seanh.cc/). Theme demo site: <https://seanh.github.io/jekyll-theme-seanh/>
+[seanh.cc](https://seanh.cc/). Theme demo site: <https://www.seanh.cc/jekyll-theme-seanh/>
 
 Running Locally
 ---------------
