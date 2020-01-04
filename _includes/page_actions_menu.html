@@ -1,0 +1,19 @@
+{% comment %}
+A hoverable dropup menu containing actions for the current page.
+
+Usage
+=====
+
+  {% include page_actions_menu.html %}
+{% endcomment %}
+{% capture menu_items %}
+  {% for item in site.data.footer_links %}
+    <a href="{{ item.url | relative_url }}" {%- if item.title %}title="{{ item.title }}"{% endif -%}>{{ item.text }}</a>
+  {% endfor %}
+  {% include view_source_link.html %}
+  {% include edit_page_link.html %}
+{% endcapture %}
+
+<div class="page-actions-menu" style="position: fixed; bottom: 0; right: 0;">
+  {% include dropup.html menu_items=menu_items %}
+</div>

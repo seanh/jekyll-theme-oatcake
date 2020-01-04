@@ -1,0 +1,22 @@
+{% comment %}
+A hoverable dropup menu.
+
+Usage
+=====
+
+  {% capture menu_items %}
+    <a href="...">Menu Item 1</a>
+    <a href="...">Menu Item 2</a>
+    <a href="...">Menu Item 3</a>
+  {% endcapture %}
+  {% include dropup.html menu_items=menu_items %}
+{% endcomment %}
+
+<div class="dropup">
+  <button class="dropup__button">
+    ☰
+  </button>
+  <div class="dropup__content">
+    {{ include.menu_items }}
+  </div>
+</div>

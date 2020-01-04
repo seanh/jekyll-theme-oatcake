@@ -37,20 +37,7 @@
 
     {{ content }}
 
-    <footer class="site-footer meta">
-      <div class="inner-container">
-        <ul class="site-footer__links">
-          {% include view_source_link.html %}
-          {% include edit_page_link.html %}
-          {% for item in site.data.footer_links %}
-            <li class="site-footer__links-item">
-              <a href="{{ item.url | relative_url }}" {%- if item.title %}title="{{ item.title }}"{% endif -%}>{{ item.text }}</a>
-            </li>
-          {% endfor %}
-        </ul>
-      </footer>
-    </footer>
-
+    {% include page_actions_menu.html %}
     <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.2.2/anchor.min.js"></script>
     <script>
        anchors.options.placement = "left";

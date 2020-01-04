@@ -71,13 +71,6 @@ Complete example (from getbem.com):
     </form>
 **/
 
-/* html and body need to have height: 100% in order for the sticky bottom
- * site-footer to work. */
-html,
-body {
-  height: 100%;
-}
-
 body {
   box-sizing: border-box;
   display: flex;
@@ -135,7 +128,6 @@ body {
 
 .content {
   flex-shrink: 0;
-  padding-bottom: 10rem;
 }
 
 .content__outer-container {
@@ -172,30 +164,9 @@ body {
   margin-left: 0;
 }
 
-.site-footer {
-  text-align: center;
-  width: 100%;
-  margin-top: auto;
-}
-
 @media all and (max-width: 800px) {
   .github-ribbon,
-  .site-footer {
+  .page-actions-menu {
     display: none !important;
   }
-}
-
-.site-footer__links {
-  list-style: none;
-  margin-bottom: 0;
-}
-
-.site-footer__links-item {
-  display: inline-block;
-  margin-left: 0;
-  padding-right: 16px;
-}
-
-.site-footer__links-item:last-child {
-  padding-right: 0;
 }
