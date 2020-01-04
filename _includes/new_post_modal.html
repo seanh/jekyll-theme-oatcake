@@ -1,0 +1,42 @@
+{% comment %}
+A modal dialog for creating a new post.
+
+Usage
+=====
+
+  {% include new_post_modal.html %}
+
+You also need to include, somewhere in your page, the link for opening the modal:
+
+  {% include new_post_link.html %}
+{% endcomment %}
+{% assign modal_id  = "new_post_modal" %}
+{% assign link_id = "new_post_link" %}
+{% assign close_id  = "new_post_close" %}
+
+<div id="{{ modal_id }}" class="modal">
+  <div class="modal__content content__outer-container">
+    <span id="{{ close_id }}" class="modal__close">&times;</span>
+    {% include new_post_form.html %}
+  </div>
+</div>
+
+<script>
+  const modal = document.getElementById("{{ modal_id }}");
+  const btn = document.getElementById("{{ link_id }}");
+  const close = document.getElementById("{{ close_id }}");
+
+  btn.onclick = function() {
+    modal.style.display = "block";
+    document.querySelector('.js-new-post').focus();
+  }
+
+  close.onclick = function() { modal.style.display = "none"; }
+
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+</script>

@@ -1,30 +1,21 @@
 New Post Form
 =============
 
-The [`new_post_form.html`]({{ site.github.repository_url }}/blob/master/_includes/new_post_form.html) include renders a form
-for quickly creating a new post on GitHub:
+As well as the [Edit and View Source links](./2019-11-11-edit-page-and-view-source-buttons.md)
+the `☰` menu in the bottom-right of every page also includes a
+<kbd>New</kbd> button that opens a modal dialog with a form
+for quickly creating a new post on GitHub.
 
-{% include new_post_form.html %}
+When submitted the new post form opens GitHub's <samp>New File</samp> page with
+the path, filename and commit message pre-filled based on the title you enter.
+You can type the body of your post and just click GitHub's <kbd>Create new
+file</kbd> button. A new post created in this way is a
+[draft](./2019-12-22-drafts.md) by default so you can save the file to GitHub
+without it appearing on your site yet.  To publish the post just delete the
+pre-filled YAML front matter from the file.
 
-The form opens GitHub's <samp>New File</samp> page with the path, filename and commit message pre-filled based on the title you enter.
-You can type the body of your post and just click GitHub's <kbd>Create new file</kbd> button. A new post created in this way
-is a draft by default so you can save the file to GitHub without it appearing on your site yet.
-To publish the post just delete the pre-filled YAML front matter from the file.
-
-To add a new post form like the one above to your site just call the `new_post_form.html` include like this:
-`{% raw %}{% include new_post_form.html %}{% endraw %}`. You could put this in a `new.md` file and then just visit
-`YOUR_SITE.com/new` whenever you want to create a new post. See
-[`{{ site.github.hostname }}/{{ site.github.repository_nwo }}/new.md`](https://raw.githubusercontent.com/{{ site.github.repository_nwo }}/master/new.md)
-for an example.
-
-This demo site also uses [`_data/footer_links.yaml`](https://raw.githubusercontent.com/{{ site.github.repository_nwo }}/master/_data/footer_links.yaml)
-to add a link in the site footer to the new post page. `footer_links.yaml` is a
-Jekyll [Data File](https://jekyllrb.com/docs/datafiles/) that contains a list
-of links to go in the site footer. To add a link to your `new.md` file add an
-item like this to `footer_links.yaml`:
+To remove the New Post link `new_post_link: false` in your `_config.yml`:
 
 ```yaml
-- url: new
-  text: New
-  title: Create a New Post
+new_post_link: false
 ```

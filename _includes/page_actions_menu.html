@@ -7,13 +7,14 @@ Usage
   {% include page_actions_menu.html %}
 {% endcomment %}
 {% capture menu_items %}
-  {% for item in site.data.footer_links %}
-    <a href="{{ item.url | relative_url }}" {%- if item.title %}title="{{ item.title }}"{% endif -%}>{{ item.text }}</a>
-  {% endfor %}
-  {% include view_source_link.html %}
-  {% include edit_page_link.html %}
+  {% if site.new_post_link != false %}{% include new_post_link.html %}{% endif %}
+  {% if site.view_source_link != false %}{% include view_source_link.html %}{% endif %}
+  {% if site.edit_page_link != false %}{% include edit_page_link.html %}{% endif %}
 {% endcapture %}
 
-<div class="page-actions-menu" style="position: fixed; bottom: 0; right: 0;">
-  {% include dropup.html menu_items=menu_items %}
-</div>
+{% assign menu_items = menu_items | strip %}
+{% if menu_items != "" %}
+  <div class="page-actions-menu" style="position: fixed; bottom: 0; right: 0;">
+    {% include dropup.html menu_items=menu_items %}
+  </div>
+{% endif %}

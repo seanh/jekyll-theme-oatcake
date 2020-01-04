@@ -38,6 +38,7 @@
     {{ content }}
 
     {% include page_actions_menu.html %}
+    {% if site.new_post_link != false %}{% include new_post_modal.html %}{% endif %}
     <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.2.2/anchor.min.js"></script>
     <script>
        anchors.options.placement = "left";
