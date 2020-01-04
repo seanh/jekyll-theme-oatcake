@@ -13,21 +13,28 @@ layout: default
     </div><!-- content__outer-container -->
   </article>
 
-  <div class="content__outer-container">
-    <div class="inner-container" style="margin-top: 52px;">
-      {% for category in page.categories %}
-        {% if site.categories[category].size > 1 %}
-          <h5>All posts in category {% include category_link.html category=category %}:</h5>
-          {% include post_list.html category=category all=true %}
-        {% endif %}
-      {% endfor %}
+  {% capture page_meta %}
+    {% for category in page.categories %}
+      {% if site.categories[category].size > 1 %}
+        <h5>All posts in category {% include category_link.html category=category %}:</h5>
+        {% include post_list.html category=category all=true %}
+      {% endif %}
+    {% endfor %}
 
-      {% for tag in page.tags %}
-        {% if site.tags[tag].size > 1 %}
-        <h5>All posts tagged {% include tag_link.html tag=tag %}:</h5>
-          {% include post_list.html tag=tag all=true %}
-        {% endif %}
-      {% endfor %}
+    {% for tag in page.tags %}
+      {% if site.tags[tag].size > 1 %}
+      <h5>All posts tagged {% include tag_link.html tag=tag %}:</h5>
+        {% include post_list.html tag=tag all=true %}
+      {% endif %}
+    {% endfor %}
+  {% endcapture %}
+
+  {% assign page_meta = page_meta | strip %}
+  {% if page_meta != "" %}
+    <div class="content__outer-container">
+      <div class="inner-container" style="margin-top: 52px;">
+        {{ page_meta }}
+      </div>
     </div>
-  </div>
+  {% endif %}
 </main>
