@@ -7,6 +7,7 @@
   {% endif -%}
 {% endcapture %}
 
-{%- if footer_contents | strip != "" %}
-  <footer class="page-footer meta">{{ footer_contents }}</footer>
+{% assign footer_contents = footer_contents | strip %}
+{%- if footer_contents != "" %}
+  <footer class="page-footer meta"><p>{{ footer_contents }}</p></footer>
 {%- endif -%}
