@@ -7,5 +7,5 @@ Diplodocus
 ==========
 
 This is just an example post with the "Dinosaurs" tag,
-to help demonstrate the [Categories and Tags](/oatcake/{% post_url 2019-12-24-categories-and-tags %})
+to help demonstrate the [Categories and Tags](/jekyll-theme-oatcake/{% post_url 2019-12-24-categories-and-tags %})
 feature.

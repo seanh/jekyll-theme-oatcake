@@ -2,7 +2,7 @@ Oatcake
 =======
 
 This is **Oatcake**, the [GitHub Pages](https://pages.github.com/) theme that I use on
-[seanh.cc](https://seanh.cc/). Theme demo site: <https://www.seanh.cc/oatcake/>
+[seanh.cc](https://seanh.cc/). Theme demo site: <https://www.seanh.cc/jekyll-theme-oatcake/>
 
 Running Locally
 ---------------
@@ -21,8 +21,8 @@ To install and run this theme and demo site locally:
 2. Clone this repo and cd into it:
 
    ```
-   git clone https://github.com/seanh/oatcake.git
-   cd oatcake
+   git clone https://github.com/seanh/jekyll-theme-oatcake.git
+   cd jekyll-theme-oatcake
    ```
 
 3. Install Jekyll and other dependencies:
@@ -31,7 +31,7 @@ To install and run this theme and demo site locally:
    bundle install --path vendor/bundle
    ```
 
-4. Finally, serve the site at <http://localhost:4000/oatcake/>:
+4. Finally, serve the site at <http://localhost:4000/jekyll-theme-oatcake/>:
 
    ```
     bundle exec jekyll serve
@@ -43,10 +43,10 @@ Pages gem.
 Publishing a Release
 --------------------
 
-Just create a new tag and [GitHub release](https://github.com/seanh/oatcake/releases).
+Just create a new tag and [GitHub release](https://github.com/seanh/jekyll-theme-oatcake/releases).
 
 GitHub Pages sites can then upgrade to the new version by bumping the version number in their
-`_config.yml` files: `remote_theme: seanh/oatcake@X.Y.Z`
+`_config.yml` files: `remote_theme: seanh/jekyll-theme-oatcake@X.Y.Z`
 
 See the [jekyll-remote-theme](https://github.com/benbalter/jekyll-remote-theme) plugin that
 GitHub Pages uses for building sites with GitHub-hosted themes.

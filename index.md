@@ -38,7 +38,7 @@ Using with GitHub Pages
    that the theme needs:
 
    ```yaml
-   remote_theme: seanh/oatcake@0.1.3
+   remote_theme: seanh/jekyll-theme-oatcake@0.1.3
    plugins:
    - jekyll-feed
    ```
@@ -68,4 +68,4 @@ Using with GitHub Pages
 Contributing
 ------------
 
-Bug reports and pull requests are welcome on GitHub at <https://github.com/seanh/oatcake/>.
+Bug reports and pull requests are welcome on GitHub at <https://github.com/seanh/jekyll-theme-oatcake/>.
