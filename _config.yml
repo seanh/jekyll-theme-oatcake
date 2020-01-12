@@ -1,5 +1,5 @@
 author: Sean Hammond
-baseurl: /jekyll-theme-seanh
+baseurl: /oatcake
 description: The GitHub Pages theme that I use on seanh.cc
 permalink: pretty
 plugins:
@@ -11,7 +11,7 @@ plugins:
   - jekyll-sitemap
 sass:
   style: compressed
-title: jekyll-theme-seanh
+title: Oatcake
 
 github_ribbon: true
 

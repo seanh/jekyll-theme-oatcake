@@ -7,5 +7,5 @@ Example Post Tagged "Favorite Recipes"
 ======================================
 
 This is just an example post with the "Favorite Recipes" tag,
-to help demonstrate the [Categories and Tags](/jekyll-theme-seanh/{% post_url 2019-12-24-categories-and-tags %})
+to help demonstrate the [Categories and Tags](/oatcake/{% post_url 2019-12-24-categories-and-tags %})
 feature.

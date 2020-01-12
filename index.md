@@ -2,10 +2,10 @@
 layout: page
 ---
 
-jekyll-theme-seanh
-==================
+Oatcake
+=======
 
-This is the [GitHub Pages](https://pages.github.com/) theme that I use on
+This is **Oatcake**, the [GitHub Pages](https://pages.github.com/) theme that I use on
 [seanh.cc](https://seanh.cc/). It's meant to be a plain theme, fast and mobile
 friendly, that doesn't get in the way of reading or writing. It has a simple
 layout, uninteresting colours, and a system font stack that matches with the
@@ -38,7 +38,7 @@ Using with GitHub Pages
    that the theme needs:
 
    ```yaml
-   remote_theme: seanh/jekyll-theme-seanh@0.1.3
+   remote_theme: seanh/oatcake@0.1.3
    plugins:
    - jekyll-feed
    ```
@@ -68,4 +68,4 @@ Using with GitHub Pages
 Contributing
 ------------
 
-Bug reports and pull requests are welcome on GitHub at <https://github.com/seanh/jekyll-theme-seanh/>.
+Bug reports and pull requests are welcome on GitHub at <https://github.com/seanh/oatcake/>.
