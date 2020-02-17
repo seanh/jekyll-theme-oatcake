@@ -28,7 +28,7 @@ It also has convenient links for [creating](_posts/2019-11-11-new-post-form.md)
 and [editing](_posts/2019-11-11-edit-page-and-view-source-buttons.md) pages
 and supports [drafts](_posts/2019-12-22-drafts.md) even on GitHub Pages.
 
-See the posts for the [full list of features](posts.md).
+See the posts for the [full list of features](#posts).
 
 Using with GitHub Pages
 -----------------------
@@ -62,8 +62,11 @@ Using with GitHub Pages
    ```
 
    For example you might want to include it on your front page, or on a `/posts` page.
-   See [posts.md]({{ site.github.repository_url }}/blob/master/posts.md)
-   for an example.
+
+Posts
+-----
+
+{% include post_list.html %}
 
 Contributing
 ------------

@@ -1,8 +1,0 @@
-- url: /
-  text: Home
-- url: /posts/
-  text: Posts
-- url: https://github.com/seanh/jekyll-theme-oatcake/issues
-  text: Issues
-- url: https://github.com/seanh/jekyll-theme-oatcake/releases
-  text: Releases
