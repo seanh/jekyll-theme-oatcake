@@ -77,55 +77,6 @@ body {
   flex-direction: column;
 }
 
-.site-header {
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-top: 12px;
-  padding-bottom: 12px;
-  background-color: var(--body-color);
-  color: var(--muted-color);
-}
-
-.site-header__navbar {
-  text-align: center;
-  overflow-x: auto;
-  white-space: nowrap;
-}
-
-.site-header__nav-links {
-  list-style: none;
-  margin-bottom: 0;
-}
-
-.site-header__nav-item {
-  display: inline-block;
-  vertical-align: bottom;
-  margin-left: 0;
-}
-
-.site-header__nav-item:first-child a {
-  padding-left: 0;
-}
-
-.site-header__nav-item:last-child a {
-  padding-right: 0;
-}
-
-.site-header__nav-link {
-  color: hsla(0,0%,100%,.75);
-  text-decoration: none;
-  border: none;
-  padding-right: 16px;
-  line-height: 32px;
-  transition: color 250ms linear;
-  font-size: var(--navbar-font-size);
-  font-weight: var(--navbar-font-weight);
-}
-
-.site-header__nav-link--active {
-  color: white;
-}
-
 .content {
   flex-shrink: 0;
 }
