@@ -1,3 +1,16 @@
 <header class="page-header inner-container">
+  {% assign show_author = layout.show_author | default: false %}
+  {% capture meta %}
+    {% if site.author and show_author %}
+      <a rel="author" href="{{ "/" | relative_url }}">{{ site.author }}</a>,
+    {%- endif %}
+    {%- if page.date %}
+      <time datetime="{{ page.date | date: '%Y-%m-%d' }}" pubdate>{{ page.date | date: "%b %Y" }}</time>
+    {% endif -%}
+  {% endcapture %}
+  {% assign meta = meta | strip %}
+  {% if meta != "" %}
+    <p class="meta">{{ meta }}</p>
+  {% endif %}
   <h1 class="page-header__title">{{ page.title }}</h1>
 </header>
