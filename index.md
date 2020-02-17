@@ -20,7 +20,7 @@ and lots of typographical extras like
 [footnotes](_posts/2019-08-06-footnotes.md),
 [emoji](_posts/2019-08-11-emoji.md),
 [alerts](_posts/2019-09-09-alert-boxes.md),
-[lead paragraphs](_posts/2019-09-09-lead-paragraphs.md),
+[subtitles](_posts/2019-09-09-subtitles.md),
 [badges](_posts/2019-09-13-badges-and-pills.md)
 and more.
 
