@@ -4,7 +4,8 @@
   --bold-color: black;
   --muted-color: #6a737d;
 
-  --code-background-color: Pink;
+  /* Match the background-color of the GitHub syntax highlighting theme. */
+  --code-background-color: #f8f8f8;
   --code-color: inherit;
 
   --pre-code-background-color: #f8f8f8;
