@@ -83,7 +83,6 @@ sub {
 
 small {
   font-size: var(--small-font-size);
-  line-height: var(--small-line-height);
 }
 
 var {
@@ -102,11 +101,6 @@ summary {
 
 .muted {
   color: var(--muted-color);
-}
-
-.meta {
-  font-size: var(--small-font-size);
-  line-height: var(--small-line-height);
 }
 
 .meta,
