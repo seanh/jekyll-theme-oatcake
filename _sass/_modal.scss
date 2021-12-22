@@ -20,7 +20,7 @@
 .modal__close {
   float: right;
   font-size: 28px;
-  font-weight: bold;
+  font-weight: var(--bold-font-weight);
 }
 
 .modal__close:hover,
