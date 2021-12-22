@@ -89,7 +89,7 @@ body {
 }
 
 .page-header {
-  padding-top: 50px;
+  padding-top: calc(var(--body-line-height) * 2);
 }
 
 .inner-container {
