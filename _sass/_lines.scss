@@ -1,0 +1,6 @@
+.lines {
+  background-image: url(#{$line_svg});
+  background-position: left top;
+  background-repeat: repeat;
+  background-size: var(--body-line-height);
+}

@@ -35,5 +35,13 @@
        anchors.add(".anchors h5");
        anchors.add(".anchors h6");
      </script>
+     <script>
+       document.addEventListener("DOMContentLoaded", function() {
+         const params = new URLSearchParams(window.location.search);
+         if (params.has('lines')) {
+           document.getElementsByTagName('body')[0].classList.add('lines')
+         }
+       });
+     </script>
   </body>
 </html>
