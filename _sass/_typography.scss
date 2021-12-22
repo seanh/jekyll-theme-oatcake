@@ -33,7 +33,7 @@ details,
 .note,
 .seealso,
 .todo {
-  margin-bottom: 26px;
+  margin-bottom: var(--body-line-height);
 }
 
 p,
@@ -51,24 +51,39 @@ strong, b {
 }
 
 hr {
-  background: transparent;
+  margin-top: calc(var(--body-line-height) * 2);
+  margin-bottom: calc(var(--body-line-height) * 2);
+  box-sizing: content-box;
   border: 0;
-  border-top: 1px solid var(--muted-color);
-  margin-bottom: 26px;
+  color: var(--body-color);
+  display: block;
+  height: var(--body-line-height);
+  margin-right: auto;
+  margin-left: auto;
+  background-size: 100% var(--body-line-height);
+  background-image: linear-gradient(to bottom, transparent 1px, transparent 11px, var(--body-color) 11px, var(--body-color) 15px, transparent 15px, transparent 26px);
+  width: 100px;
 }
 
 sup,
 sub {
   vertical-align: baseline;
   position: relative;
-  top: -0.4em;
-  font-size: smaller;
+  font-size: var(--small-font-size);
   padding-left: .1em;
-  font-weight: bold;
+}
+
+sup {
+  top: -0.5em;
 }
 
 sub {
-  top: 0.4em;
+  bottom: -0.25em;
+}
+
+small {
+  font-size: var(--small-font-size);
+  line-height: var(--small-line-height);
 }
 
 var {
