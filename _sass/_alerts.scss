@@ -10,9 +10,15 @@
 .note,
 .seealso,
 .todo {
-  padding: .75rem 1.25rem;
   border: 1px solid transparent;
   border-radius: .25rem;
+
+  /* The 1px is to subtract the two 1px's added by the top and bottom borders. */
+  padding-top: calc(var(--body-line-height) - 1px);
+  padding-bottom: calc(var(--body-line-height) - 1px);
+
+  padding-left: calc(var(--body-line-height) * 0.5);
+  padding-right: calc(var(--body-line-height) * 0.5);
 }
 
 .admonition *:last-child,
