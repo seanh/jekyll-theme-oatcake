@@ -8,8 +8,7 @@ Oatcake
 This is **Oatcake**, the [GitHub Pages](https://pages.github.com/) theme that I use on
 [seanh.cc](https://seanh.cc/). It's meant to be a plain theme, fast and mobile
 friendly, that doesn't get in the way of reading or writing. It has a simple
-layout, uninteresting colours, and a system font stack that matches with the
-user's OS.
+layout and uninteresting colours and fonts.
 
 The theme has
 [nice basic typography](_posts/2019-08-01-basics.md)
