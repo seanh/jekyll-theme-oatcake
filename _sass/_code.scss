@@ -25,8 +25,10 @@ h6 code {
 }
 
 pre {
-  line-height: 1.25;
-  padding: 16px;
+  padding-top: var(--body-line-height);
+  padding-bottom: var(--body-line-height);
+  padding-left: calc(var(--body-line-height) * 0.5);
+  padding-right: calc(var(--body-line-height) * 0.5);
   overflow: auto;
 }
 
