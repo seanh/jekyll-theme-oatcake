@@ -1,9 +1,9 @@
 <li class="posts-list__item">
   <p>
     <span class="muted">{{ post.date | date: "%b %Y" }}&ensp;</span>
-    {% if post == page %}
+    {%- if post == page %}
       {{ post.title }}
-    {% else %}
+    {% else -%}
       <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
     {% endif %}
   </p>
