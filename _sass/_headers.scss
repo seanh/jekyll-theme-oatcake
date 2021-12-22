@@ -27,3 +27,6 @@ h5 {
 h6 {
   font-size: 1rem;
 }
+
+/* No margin above the title of a post or page. */
+h1.page-title { margin-top: 0; }
