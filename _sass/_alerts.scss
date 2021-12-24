@@ -11,11 +11,13 @@
 .seealso,
 .todo {
   border: 1px solid transparent;
+  margin-top: -1px;
+  margin-bottom: -1px;
+
   border-radius: .25rem;
 
-  /* The 1px is to subtract the two 1px's added by the top and bottom borders. */
-  padding-top: calc(var(--body-line-height) - 1px);
-  padding-bottom: calc(var(--body-line-height) - 1px);
+  padding-top: var(--body-line-height);
+  padding-bottom: var(--body-line-height);
 
   padding-left: calc(var(--body-line-height) * 0.5);
   padding-right: calc(var(--body-line-height) * 0.5);
