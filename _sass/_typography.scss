@@ -57,18 +57,10 @@ strong, b {
 }
 
 hr {
-  margin-top: calc(var(--body-line-height) * 2);
-  margin-bottom: calc(var(--body-line-height) * 2);
-  box-sizing: content-box;
+  background: transparent;
   border: 0;
-  color: var(--body-color);
-  display: block;
-  height: var(--body-line-height);
-  margin-right: auto;
-  margin-left: auto;
-  background-size: 100% var(--body-line-height);
-  background-image: linear-gradient(to bottom, transparent 1px, transparent 11px, var(--body-color) 11px, var(--body-color) 15px, transparent 15px, transparent 26px);
-  width: 100px;
+  border-top: 1px solid var(--muted-color);
+  margin-bottom: var(--body-line-height);
 }
 
 sup,
