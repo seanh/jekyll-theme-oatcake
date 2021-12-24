@@ -41,6 +41,12 @@ li {
   hyphens: auto;
 }
 
+/* Fix for list item bullets messing up the vertical rhythm. */
+li {
+  list-style-type: "•";
+  padding-inline-start: 1ch;
+}
+
 em, i {
   font-style: italic;
 }
