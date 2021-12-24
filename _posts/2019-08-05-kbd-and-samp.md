@@ -39,7 +39,7 @@ user by the system:
 
 > If a syntax error occurs, the tool will output the initial
 > command you typed for your review:
-> > <samp><kbd>custom-git ad my-new-file.cpp</kbd></samp>
+> > <samp><kbd>custom-git add my-new-file.cpp</kbd></samp>
 
 Another usage for this is showing the output of a terminal session as a
 `<samp>` inside a `<pre>`, and with the user-entered parts as `<kbd>`'s inside
