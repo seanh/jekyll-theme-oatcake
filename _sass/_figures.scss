@@ -3,7 +3,7 @@ figure figcaption {
 }
 
 figure img {
-  margin-bottom: 8px !important;
+  margin-bottom: var(--body-line-height) !important;
 }
 
 figure figcaption,
