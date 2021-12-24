@@ -1,32 +1,50 @@
-h1, h2, h3, h4, h5, h6 {
-  line-height: 1.2;
-  font-weight: 600;
-  margin-bottom: 26px;
-}
+h1, h2, h3, h4, h5, h6 { font-weight: var(--bold-font-weight); }
 
 h1 {
   font-size: 2.5rem;
+  line-height:   calc(var(--body-line-height) * 2);
+  margin-top:    calc(var(--body-line-height) * 4);
+  margin-bottom: calc(var(--body-line-height) * 1);
 }
 
 h2 {
-  font-size: 2rem;
+  font-size: 1.6875rem;
+  line-height:   calc(var(--body-line-height) * 1.5);
+  margin-top:    calc(var(--body-line-height) * 2.5);
+  margin-bottom: calc(var(--body-line-height) * 1.0);
 }
 
 h3 {
-  font-size: 1.75rem;
+  font-size: 1.375rem;
+  line-height:   calc(var(--body-line-height) * 1.0);
+  margin-top:    calc(var(--body-line-height) * 2.0);
+  margin-bottom: calc(var(--body-line-height) * 1.0);
 }
 
 h4 {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
+  line-height:   calc(var(--body-line-height) * 1.0);
+  margin-top:    calc(var(--body-line-height) * 1.5);
+  margin-bottom: calc(var(--body-line-height) * 0.5);
 }
 
 h5 {
-  font-size: 1.25rem;
+  font-size: 1rem;
+  line-height:   calc(var(--body-line-height) * 1.0);
+  margin-top:    calc(var(--body-line-height) * 2.5);
+  margin-bottom: calc(var(--body-line-height) * 0.5);
 }
 
 h6 {
   font-size: 1rem;
+  line-height:   calc(var(--body-line-height) * 1.0);
+  margin-top:    calc(var(--body-line-height) * 2.5);
+  margin-bottom: calc(var(--body-line-height) * 0.5);
+
+  font-style: italic;
+  font-weight: var(--normal-font-weight);
 }
+
 
 /* No margin above the title of a post or page. */
 h1.page-title { margin-top: 0; }
