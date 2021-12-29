@@ -42,9 +42,15 @@ li {
 }
 
 /* Fix for list item bullets messing up the vertical rhythm. */
-li {
+ul li {
   list-style-type: "•";
   padding-inline-start: 1ch;
+  margin-left: 18px;
+}
+
+.no-bullets li {
+  list-style-type: none;
+  padding-inline-start: 0;
 }
 
 em, i {
