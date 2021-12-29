@@ -136,3 +136,13 @@ details summary + h6 {
 .lines .headings-demo {
   background-color: inherit;
 }
+
+/* Fix vertical rhythm bug with <code>'s in headings. */
+h1 code,
+h2 code,
+h3 code,
+h4 code,
+h5 code,
+h6 code {
+  vertical-align: bottom;
+}
