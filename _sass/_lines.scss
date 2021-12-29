@@ -1,6 +1,6 @@
 .lines {
-  background-image: url(#{$line_svg});
+  background-size: 100% 28px;
+  background-image: linear-gradient(to bottom,rgba(0,170,255,.3) 1px,transparent 1px,transparent 16px,rgba(0,170,255,.2) 16px,transparent 17px,transparent 32px);
   background-position: left top;
   background-repeat: repeat;
-  background-size: var(--body-line-height);
 }
