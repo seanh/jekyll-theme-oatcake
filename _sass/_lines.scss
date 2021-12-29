@@ -4,3 +4,20 @@
   background-position: left top;
   background-repeat: repeat;
 }
+
+.lines .admonition,
+.lines .attention,
+.lines .caution,
+.lines .danger,
+.lines .error,
+.lines .important,
+.lines .warning,
+.lines .hint,
+.lines .tip,
+.lines .note,
+.lines .seealso,
+.lines .todo {
+  background-color: inherit;
+}
+
+.lines pre { overflow-x: hidden; }
