@@ -24,8 +24,9 @@ h6 code {
 }
 
 pre {
-  padding-top: var(--body-line-height);
-  padding-bottom: var(--body-line-height);
+  border: 1px solid var(--pre-code-background-color);  /* Invisible border used with vertical rhythm debugging lines. */
+  padding-top: calc(var(--body-line-height) - 1px);
+  padding-bottom: calc(var(--body-line-height) - 1px);
   padding-left: calc(var(--body-line-height) * 0.5);
   padding-right: calc(var(--body-line-height) * 0.5);
   overflow: auto;

@@ -20,4 +20,12 @@
   background-color: inherit;
 }
 
-.lines pre { overflow-x: hidden; }
+.lines pre {
+  overflow-x: hidden;
+}
+
+.lines pre,
+.lines pre code,
+.lines .highlight {
+  background-color: inherit;
+}
