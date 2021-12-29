@@ -13,7 +13,7 @@
     {% endif %}
     {% seo %}
   </head>
-  <body>
+  <body {% if page.lines%}class="lines"{% endif %}>
       <button id="toggleLines" style="display: block; position: fixed; top: 0; left: 0; text-decoration: none; border: none;">
         Toggle Lines
       </button>
