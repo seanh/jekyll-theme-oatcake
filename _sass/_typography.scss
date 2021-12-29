@@ -60,7 +60,8 @@ hr {
   background: transparent;
   border: 0;
   border-top: 1px solid var(--muted-color);
-  margin-bottom: var(--body-line-height);
+  margin-bottom: -1px;
+  padding-bottom: var(--body-line-height);
 }
 
 sup,
