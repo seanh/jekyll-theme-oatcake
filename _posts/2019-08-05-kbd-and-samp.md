@@ -19,6 +19,9 @@ in `<kbd>` tags: <kbd>help mycommand</kbd>
 You can use nested `<kbd>`'s to represent multiple keystrokes that form a
 single input: <kbd><kbd>Ctrl</kbd> + <kbd>c</kbd></kbd>.
 
+Up to two levels of nesting are supported by the CSS:
+<kbd><kbd><kbd>Ctrl</kbd> + <kbd>b</kbd></kbd> <kbd><kbd>Shift</kbd> + <kbd>t</kbd></kbd></kbd>.
+
 Representing Onscreen Input Options by Nesting `<samp>` within `<kbd>`
 ----------------------------------------------------------------------
 
