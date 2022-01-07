@@ -21,18 +21,18 @@
   padding-right: calc(var(--body-line-height) * 0.5);
 }
 
-.admonition *:last-child,
-.attention *:last-child,
-.caution *:last-child,
-.danger *:last-child,
-.error *:last-child,
-.important *:last-child,
-.warning *:last-child,
-.hint *:last-child,
-.tip *:last-child,
-.note *:last-child,
-.seealso *:last-child,
-.todo *:last-child {
+.admonition > *:last-child,
+.attention > *:last-child,
+.caution > *:last-child,
+.danger > *:last-child,
+.error > *:last-child,
+.important > *:last-child,
+.warning > *:last-child,
+.hint > *:last-child,
+.tip > *:last-child,
+.note > *:last-child,
+.seealso > *:last-child,
+.todo > *:last-child {
   margin-bottom: 0;
 }
 
