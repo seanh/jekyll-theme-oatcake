@@ -10,3 +10,11 @@ figure figcaption,
 figure figcaption p {
   color: var(--muted-color);
 }
+
+/* If a figure has a caption then make the vertical space below the caption
+   be larger than the vertical space above the caption. This is to put the
+   caption visibly closer to the figure that it belongs to than to whatever
+   follows the figure. */
+figcaption {
+  padding-bottom: var(--body-line-height);
+}
