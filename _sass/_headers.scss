@@ -21,9 +21,7 @@ h3, h4, h5, h6 {
   line-height:   calc(var(--body-line-height) * 1.0);
   padding-top:    calc(var(--body-line-height) * 2.0);
   padding-bottom: calc(var(--body-line-height) * 1.0);
-
-  font-weight: var(--normal-font-weight);
-  text-transform: uppercase;
+  font-weight: 700;
 }
 
 h1.page-title,
