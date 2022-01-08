@@ -29,24 +29,8 @@ h1 kbd {
   font-size: 2.1rem;
 }
 
-h2 code,
-h2 samp {
-  font-size: 1.2rem;
-}
-
 h2 kbd {
   font-size: 0.8rem;
-}
-
-h3 code,
-h4 code,
-h5 code,
-h6 code,
-h3 samp,
-h4 samp,
-h5 samp,
-h6 samp {
-  font-size: 1.25rem;
 }
 
 h3 kbd, h4 kbd, h5 kbd, h6 kbd {
@@ -200,6 +184,27 @@ details summary + h6 {
 }
 
 .lines .headings-demo {
+  background-color: inherit;
+}
+
+/* Get rid of the background-color on code and samp tags in headings.
+   Because headings (some sizes of headings at least) have a larger
+   text-to-line-height ratio the background-color can sometimes overlap with
+   the text above or below in multiline headings, especially when characters
+   above have hanging descenders (like "g" etc). */
+h1 code,
+h2 code,
+h3 code,
+h4 code,
+h5 code,
+h6 code,
+h1 samp,
+h2 samp,
+h3 samp,
+h4 samp,
+h5 samp,
+h6 samp {
+  color: inherit;
   background-color: inherit;
 }
 
