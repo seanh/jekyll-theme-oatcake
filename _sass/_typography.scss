@@ -17,7 +17,6 @@ ul,
 ol,
 figure,
 .inner-container pre,
-.inner-container iframe,
 dd,
 details,
 .scroll,
@@ -33,7 +32,9 @@ details,
 .note,
 .seealso,
 .todo,
-.headings-demo {
+.headings-demo,
+iframe,
+video {
   margin-bottom: var(--body-line-height);
 }
 
